@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarossiParts: Impressões 3D personalizadas, action figures, peças técnicas e decorativas. Transforme suas ideias em realidade com qualidade e criatividade.">
+    <meta name="keywords" content="impressão 3d, peças personalizadas, action figures, protótipos, carossiparts, bento gonçalves">
+    <meta name="author" content="CarossiParts">
+    <meta property="og:title" content="CarossiParts - Impressões 3D Personalizadas">
+    <meta property="og:description" content="Transforme suas ideias em realidade com impressões 3D de alta qualidade. Peças técnicas, action figures e itens decorativos.">
+    <meta property="og:image" content="public/images/logo-social.png">
+    <meta property="og:url" content="https://carossiparts.com.br">
+    <meta property="og:type" content="website">
+    <title>CarossiParts - Impressões 3D Personalizadas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.gstatic.com/s/oswald/v18/yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-.woff2" as="font" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#994000',
+                        secondary: '#A36A00',
+                        dark: '#1E293B',
+                        mercadolivre: '#A36A00',
+                        shopee: '#C25C00',
+                        whatsapp: '#25D366',
+                        instagram: '#E1306C',
+                        'orange-light': '#FFDAB9',
+                        'orange-dark': '#FFA07A',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@id": "http://www.carossiparts.com.br/#localbusiness",
+      "@type": "LocalBusiness",
+      "name": "CarossiParts",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Ângelo Marcon",
+        "addressLocality": "Bento Gonçalves",
+        "addressRegion": "RS",
+        "postalCode": "95700-000",
+        "addressCountry": "BR"
+      },
+      "telephone": "+55 54 9 9188-6962",
+      "url": "http://www.carossiparts.com.br",
+      "image": "http://www.carossiparts.com.br/public/images/logoquemsomos.png",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.13939,
+        "longitude": -51.524180799999996
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Impressões 3D Personalizadas",
+      "description": "Na CarossiParts, transformamos suas ideias em realidade com impressão 3D personalizada. Produzimos peças sob medida em PLA e PETG, de protótipos funcionais a itens decorativos. Também criamos action figures coloridas e pintadas à mão, com acabamento artesanal, perfeitas para colecionadores.",
+      "serviceType": ["Impressão 3D", "Fabricação de Peças Personalizadas", "Criação de Action Figures"],
+      "provider": {
+        "@id": "http://www.carossiparts.com.br/#localbusiness"
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="public/images/logoquemsomos.png" alt="Logo CarossiParts" class="h-12 md:h-16 lg:h-[4.5rem] mr-4" width="72" height="72">
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#quem-somos" class="hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Quem somos</a>
+                <a href="#trabalhos" class="hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Trabalhos</a>
+                <a href="#orcamentos" class="hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Orçamentos</a>
+                <a href="#onde-comprar" class="hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Onde comprar</a>
+            </div>
+            <div class="flex items-center">
+                <button id="darkModeToggle" class="p-2 rounded-full focus:outline-none">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline text-white"></i>
+                </button>
+                <button id="mobileMenuButton" class="md:hidden p-2 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 w-full px-4 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="#quem-somos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Quem somos</a>
+                <a href="#trabalhos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Trabalhos</a>
+                <a href="#orcamentos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Orçamentos</a>
+                <a href="#onde-comprar" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Onde comprar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex flex-col items-center justify-center text-white text-center px-4 relative">
+        <!-- Imagem de fundo -->
+        <img src="public/images/fundohero.jpg" alt="Fundo Hero" class="absolute inset-0 w-full h-full object-cover -z-10" width="1920" height="1080">
+        <div class="absolute inset-0 bg-black bg-opacity-60 -z-10"></div>
+        
+        <img src="public/images/logohero.webp" alt="Banner principal CarossiParts" class="w-60 sm:w-80 md:w-[25rem] lg:w-[37.5rem] mb-6 animate-fade-in" width="480" height="160">
+        <h2 class="text-xl md:text-2xl mb-8 font-bold">A fábrica das suas ideias começa aqui</h2>
+        
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <a href="https://shopee.com.br/shop/637588572" target="_blank" class="bg-shopee rounded-full p-3 hover:opacity-80 transition duration-300">
+                <i class="fas fa-store text-white text-2xl"></i>
+            </a>
+            <a href="https://lista.mercadolivre.com.br/_CustId_192984959?item_id=MLB5161827074&category_id=MLB22655&seller_id=192984959&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" class="bg-mercadolivre rounded-full p-3 hover:opacity-80 transition duration-300">
+                <i class="fab fa-shopify text-white text-2xl"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="bg-whatsapp rounded-full p-3 hover:opacity-80 transition duration-300">
+                <i class="fab fa-whatsapp text-white text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/carossiparts/" target="_blank" class="bg-instagram rounded-full p-3 hover:opacity-80 transition duration-300">
+                <i class="fab fa-instagram text-white text-2xl"></i>
+            </a>
+        </div>
+        
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 w-full md:w-auto px-4 sm:px-0">
+            <a href="#orcamentos" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+                <i class="fas fa-lightbulb mr-2"></i> Comece seu projeto
+            </a>
+            <a href="#trabalhos" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+                <i class="fas fa-images mr-2"></i> Ver trabalhos
+            </a>
+        </div>
+    </section>
+
+    <!-- Quem Somos Section -->
+    <section id="quem-somos" class="py-16 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center justify-center">
+                <div class="lg:w-1/3 mb-8 lg:mb-0 lg:pr-8 flex justify-center">
+                    <img src="public/images/logoquemsomos.png" alt="Logo CarossiParts" class="w-48 sm:w-64 md:w-80 lg:w-[30rem] h-auto" width="480" height="160">
+                </div>
+                <div class="lg:w-1/3 text-center">
+                    <h2 class="section-title text-3xl font-bold mb-6 text-primary dark:text-secondary">Quem somos</h2>
+                    <p class="mb-4">Na <span class="font-bold text-primary">CarossiParts</span>, transformamos suas ideias em realidade com impressão 3D personalizada. Produzimos peças sob medida em PLA e PETG, de protótipos funcionais a itens decorativos.</p>
+                    <p class="mb-4">Também criamos action figures coloridas e pintadas à mão, com acabamento artesanal, perfeitas para colecionadores.</p>
+                    <p class="mb-4">Nosso compromisso é com a excelência, unindo criatividade e precisão tecnológica para oferecer soluções versáteis a criadores, hobistas, engenheiros e pequenas empresas.</p>
+                    <p class="mb-4">Cada projeto é personalizado para atender suas necessidades, equilibrando funcionalidade e estética. Oferecemos orçamento gratuito, atendimento próximo e comunicação transparente.</p>
+                    <p>Envie sua ideia e transforme seu projeto em realidade com a qualidade e o cuidado da <span class="font-bold text-primary">CarossiParts</span>. Construímos nossa reputação em confiança, inovação e satisfação do cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trabalhos Section -->
+    <section id="trabalhos" class="py-16 px-4 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="section-title text-3xl font-bold mb-2 text-center text-primary dark:text-secondary">Nossos trabalhos</h2>
+            <p class="text-center mb-12 max-w-xl mx-auto dark:text-white">Conheça alguns dos nossos projetos realizados, desde peças técnicas até objetos decorativos e acessórios personalizados.</p>
+            
+            <!-- Featured Project -->
+            <div class="mb-12 bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+                <div class="md:flex">
+                    <div class="md:w-2/3 relative">
+                        <div id="featuredMediaContainer" class="w-full h-[700px] flex items-center justify-center">
+                            <img id="featuredImage" src="public/images/trabalhodestaque.jpg" alt="Trabalho em Destaque" class="w-full h-full object-cover cursor-pointer" onclick="openModal('public/images/trabalhodestaque.jpg', 'Trabalho em Destaque', 'Confira este trabalho especial em nossa galeria.')" loading="lazy" width="700" height="700">
+                            <video id="featuredVideo" controls muted class="w-full h-full object-cover object-top-[20%] hidden" poster="public/images/trabalhodestaque.jpg">
+                                <source src="public/videos/corneta.mp4" type="video/mp4">
+                                Seu navegador não suporta o elemento de vídeo.
+                            </video>
+                        </div>
+                        <button id="prevMedia" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="nextMedia" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="md:w-1/3 p-6 text-right">
+                        <h3 class="text-2xl font-semibold mb-2 text-center dark:text-white">Corneta CarossiParts - Sistema de Admissão Plug & Play</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <strong>Instalação Simplificada:</strong> Sistema Plug & Play com instalação direta no sistema rosqueado original. <br>
+                            Para o modelo CG160 com TBI liso, utilizamos parafusos especiais (inclusos sem custo adicional).
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <strong>Performance Comprovada:</strong> Ganho médio de 1,05 cv testado em dinamômetro, proporcionando melhor resposta do motor e otimização da admissão.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <strong>Opções Disponíveis:</strong> <br>
+                            <i class="fas fa-ruler-horizontal"></i> Tamanhos 3 cm ou 6 cm de comprimento <br>
+                            <i class="fas fa-palette"></i> Todas as cores disponíveis <br>
+                            Para modelos específicos, envio das medidas com paquímetro pode ser necessário. Após a compra, informe no chat o tamanho e cor desejados.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <strong>Material de Alta Qualidade:</strong> <br>
+                            Fabricada em PLA biodegradável de alta resistência, testada e aprovada para combustíveis automotivos (álcool e gasolina). <br>
+                            <i class="fas fa-exclamation-triangle"></i> Importante: Não compatível com metanol ou nitrometano, que podem deformar o material.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <strong>Motores Preparados:</strong> Para motores com preparação, consulte seu preparador antes da instalação para avaliar a necessidade de novo acerto da injeção/carburação.
+                        </p>
+                        <div class="flex space-x-2 justify-end">
+                            <span class="bg-primary dark:bg-primary px-3 py-1 rounded-full text-sm text-white">Destaque</span>
+                            <span class="bg-primary dark:bg-primary px-3 py-1 rounded-full text-sm text-white">Exclusivo</span>
+                            <span class="bg-primary dark:bg-primary px-3 py-1 rounded-full text-sm text-white">Premium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Imagens da Galeria -->
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port17.jpg" srcset="public/images/port17.webp 400w, public/images/port17.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 17" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port17.jpg', 'Walter White', 'Personagem da série Breaking Bad em impressão 3D de alta qualidade. Pintado à mão.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port19.jpg" srcset="public/images/port19.webp 400w, public/images/port19.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Ayrton Senna" class="w-full h-full object-cover cursor-pointer aspect-square object-top" onclick="openModal('public/images/port19.jpg', 'Ayrton Senna', 'Escultura em homenagem ao maior ídolo do automobilismo brasileiro.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port18.jpg" srcset="public/images/port18.webp 400w, public/images/port18.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Dr. Salvador - Resident Evil 4" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port18.jpg', 'Dr. Salvador - Resident Evil 4 – Escala 1/8 (18 cm)', 'Miniatura do personagem Dr. Salvador, do jogo Resident Evil 4, em escala 1/8 com 18 cm de altura. Impressão de alta resolução, pintada à mão, com destaque para os detalhes da motosserra, do tecido desgastado e da máscara ensanguentada. Peça colecionável para fãs de jogos e cultura pop.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port13.jpg" srcset="public/images/port13.webp 400w, public/images/port13.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 13" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port13.jpg', 'Jesus Cristo', 'Representação artística de Jesus Cristo em impressão 3D.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port14.jpg" srcset="public/images/port14.webp 400w, public/images/port14.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 14" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port14.jpg', 'Vaso de flor – Michelangelo', 'Peça decorativa impressa em Ácido Polilático (PLA) na cor Mármore. O design reproduz fielmente a cabeça da escultura de Michelangelo, com riqueza de detalhes nas feições, cabelo e expressão. Funcional como vaso ou cachepô, combinando arte clássica e utilidade.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port15.jpg" srcset="public/images/port15.webp 400w, public/images/port15.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 15" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port15.jpg', 'Afrodite', 'Estatueta de Afrodite impressa em Ácido Polilático (PLA) na cor Mármore. Superfície com textura acetinada que simula pedra. Alta definição nos detalhes anatômicos e nas linhas suaves da escultura clássica. Peça indicada para decoração artística ou colecionismo.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port16.jpg" srcset="public/images/port16.webp 400w, public/images/port16.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 16" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port16.jpg', 'São Jorge', 'Santo guerreiro em detalhada impressão 3D, perfeito para devoção.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port1.jpg" srcset="public/images/port1.webp 400w, public/images/port1.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 1" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port1.jpg', 'Vaso de flor estilizado', 'Figura colecionável com acabamento artesanal e pintura detalhada.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port10.jpg" srcset="public/images/port10.webp 400w, public/images/port10.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 10" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port10.jpg', 'Chaveiros', 'Uma forma de você agradar os seus clientes oferecendo um mimo ou agregando um pequeno valor com a venda do seu produto com um chaveiro personalizado com a marca ou nome da sua empresa.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port11.jpg" srcset="public/images/port11.webp 400w, public/images/port11.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 11" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port11.jpg', 'Peças sob medida', 'Muitos clientes necessitam de peças que não encontram no mercado para vender, e aqui, nós produzimos a peça com a maior fidelidade possível ao modelo original.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port22.webp" srcset="public/images/port22.webp 400w, public/images/port22.webp 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 22" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port22.webp', 'Mini Tigre Decorativo Texturizado', 'Adquira agora o seu Mini Tigre e descubra por que quem compra uma vez, escolhe a CarossiParts para sempre.')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port21.jpg" srcset="public/images/port21.webp 400w, public/images/port21.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 21" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port21.jpg', 'Snorkel', 'Snorkel sob medida para quadriciclos.')" loading="lazy" width="400" height="400">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal -->
+        <div id="modalOverlay" class="modal-overlay">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-content bg-white dark:bg-gray-800 p-6 rounded-lg max-w-4xl max-h-[80vh] overflow-y-auto">
+                <img id="modalImage" src="" alt="" class="mx-auto max-w-full">
+                <div class="flex justify-between items-center mt-4">
+                    <button id="modal-prev-btn" class="bg-primary hover:bg-secondary text-white p-2 rounded-full focus:outline-none">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="flex-grow">
+                        <h3 id="modalTitle" class="text-xl font-bold text-center"></h3>
+                        <p id="modalDescription" class="mt-2 text-center"></p>
+                    </div>
+                    <button id="modal-next-btn" class="bg-primary hover:bg-secondary text-white p-2 rounded-full focus:outline-none">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orçamentos Section -->
+    <section id="orcamentos" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="section-title text-3xl font-bold mb-2 text-center text-primary dark:text-secondary">Orçamentos</h2>
+            <p class="text-center mb-12 max-w-xl mx-auto">Os orçamentos são exclusivos para projetos personalizados. Fale conosco para desenvolvermos a sua ideia sob medida.</p>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <img src="public/images/orcamento.png" alt="Processo de impressão 3D" class="w-full rounded-lg shadow-md" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md mb-8">
+                        <h3 class="text-2xl font-extrabold mb-4 text-center text-primary dark:text-secondary">Como funciona</h3>
+                        <ol class="space-y-4 dark:text-white">
+                            <li class="flex items-start">
+                                <span class="bg-primary dark:bg-secondary text-white font-bold rounded-full h-6 w-6 flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                                <div>Entre em contato conosco pelo WhatsApp, Instagram, E-mail</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-primary dark:bg-secondary text-white font-bold rounded-full h-6 w-6 flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                                <div>Descreva seu projeto ou envie referências visuais</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-primary dark:bg-secondary text-white font-bold rounded-full h-6 w-6 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                                <div>Receba uma proposta com valores e prazos</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-primary dark:bg-secondary text-white font-bold rounded-full h-6 w-6 flex items-center justify-center mr-3 flex-shrink-0">4</span>
+                                <div>Acompanhe o desenvolvimento do seu projeto</div>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div class="bg-primary dark:bg-secondary text-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-extrabold mb-4 text-center text-white">Entre em contato conosco</h3>
+                        <div class="flex flex-col space-y-2">
+                            <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="bg-white text-gray-800 hover:bg-gray-100 font-semibold py-2 px-4 rounded flex items-center justify-center transition">
+                                <i class="fab fa-whatsapp mr-2 text-green-500"></i> Solicitar orçamento via WhatsApp
+                            </a>
+                            <a href="https://www.instagram.com/carossiparts/" target="_blank" class="bg-white text-gray-800 hover:bg-gray-100 font-semibold py-2 px-4 rounded flex items-center justify-center transition">
+                                <i class="fab fa-instagram mr-2 text-pink-500"></i> Contato via Instagram
+                            </a>
+                            <a href="mailto:carossiparts@gmail.com" class="bg-white text-gray-800 hover:bg-gray-100 font-semibold py-2 px-4 rounded flex items-center justify-center transition">
+                                <i class="fas fa-envelope mr-2 text-primary"></i> Solicitar orçamento via e-mail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Onde Comprar Section -->
+    <section id="onde-comprar" class="py-16 px-4 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="section-title text-3xl font-bold mb-2 text-center text-primary dark:text-secondary">Onde comprar nossos produtos</h2>
+            <p class="text-center mb-12 max-w-xl mx-auto dark:text-white">As fotos da galeria correspondem a projetos prontos que você encontra em nossas lojas virtuais.</p>
+            
+            <div class="flex flex-col md:flex-row gap-8 mb-12 justify-center">
+                <!-- Shopee Card -->
+                <div class="md:w-1/4 bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <i class="fas fa-store text-4xl mb-4 text-orange-500"></i>
+                    <h3 class="text-xl font-semibold mb-2 dark:text-white">Shopee</h3>
+                    <p class="mb-4 dark:text-white">Encontre nossos produtos prontos para entrega com frete rápido e pagamento facilitado.</p>
+                    <a href="https://shopee.com.br/carossiparts" target="_blank" class="mt-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded transition">
+                        Visite a loja
+                    </a>
+                </div>
+                
+                <!-- Mercado Livre Card -->
+                <div class="md:w-1/4 bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <i class="fab fa-shopify text-4xl mb-4 text-yellow-500"></i>
+                    <h3 class="text-xl font-semibold mb-2 dark:text-white">Mercado Livre</h3>
+                    <p class="mb-4 dark:text-white">Compre com a segurança do Mercado Livre e aproveite o Mercado Pago e entregas rápidas.</p>
+                    <a href="https://lista.mercadolivre.com.br/_CustId_192984959?item_id=MLB5161827074&category_id=MLB22655&seller_id=192984959&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" class="mt-auto bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded transition">
+                        Visite a loja
+                    </a>
+                </div>
+            </div>
+            
+            <div class="bg-primary dark:bg-secondary text-white p-6 rounded-lg shadow-md max-w-xl mx-auto">
+                <h3 class="text-xl font-semibold mb-2 text-center">Para projetos personalizados</h3>
+                <p class="mb-6 text-center">Para projetos novos, personalizados e sob demanda, fale conosco diretamente no WhatsApp. Estamos prontos para transformar sua ideia em realidade!</p>
+                <p class="mb-6 text-center">Oferecemos uma vasta gama de possibilidades, desde pequenas peças de reposição até protótipos complexos e itens de decoração exclusivos. Se você tem um arquivo 3D, podemos imprimi-lo. Se tem apenas uma ideia, nossa equipe de design pode ajudar a modelá-la.</p>
+                <div class="text-center">
+                    <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="bg-white text-gray-800 hover:bg-gray-100 font-semibold py-2 px-6 rounded-lg inline-flex items-center transition">
+                        <i class="fab fa-whatsapp mr-2 text-green-500"></i> Fale conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-10 text-center text-primary dark:text-secondary">Localização</h2>
+            <p class="text-center mb-6">Temos opção para retirada no local</p>
+            <div class="flex justify-center mt-8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.857610266919!2d-51.524180799999996!3d-29.13939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c3b383ea2d8b7%3A0xc778b89f7c5dadf8!2sR.%20%C3%82ngelo%20Marcon%20-%20S%C3%A3o%20Roque%2C%20Bento%20Gon%C3%A7alves%20-%20RS%2C%2095700-000!5e0!3m2!1spt-BR!2sbr!4v1749442415974!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4 dark:bg-gray-900">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start md:text-left text-center gap-6 md:gap-8">
+                <!-- Coluna 1: Logo e Descrição -->
+                <div class="flex flex-col items-center md:items-start md:w-1/3 text-center md:text-left">
+                    <img src="public/images/logoquemsomos.png" alt="Logo CarossiParts" class="h-24 sm:h-28 mb-4" loading="lazy" width="112" height="112">
+                    <p class="max-w-xs mb-4 text-base md:text-sm">Transformamos ideias em realidade com a mais alta tecnologia de impressão 3D.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="hover:text-primary dark:hover:text-secondary transition">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/carossiparts/" target="_blank" class="hover:text-primary dark:hover:text-secondary transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://shopee.com.br/carossiparts" target="_blank" class="hover:text-primary dark:hover:text-secondary transition">
+                            <i class="fas fa-store text-xl"></i>
+                        </a>
+                        <a href="https://lista.mercadolivre.com.br/_CustId_192984959?item_id=MLB5161827074&category_id=MLB22655&seller_id=192984959&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" class="hover:text-primary dark:hover:text-secondary transition">
+                            <i class="fab fa-shopify text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Navegação -->
+                <div class="md:w-1/3 mt-8 md:mt-0 text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-4">Navegação</h3>
+                    <ul class="space-y-2 text-base md:text-sm">
+                        <li><a href="#quem-somos" class="hover:text-primary dark:hover:text-secondary transition">Quem somos</a></li>
+                        <li><a href="#trabalhos" class="hover:text-primary dark:hover:text-secondary transition">Trabalhos</a></li>
+                        <li><a href="#orcamentos" class="hover:text-primary dark:hover:text-secondary transition">Orçamentos</a></li>
+                        <li><a href="#onde-comprar" class="hover:text-primary dark:hover:text-secondary transition">Onde comprar</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contato -->
+                <div class="md:w-1/3 mt-8 md:mt-0 text-center md:text-left">
+                    <h3 class="text-lg font-semibold mb-4">Contato</h3>
+                    <div class="space-y-2 flex flex-col items-center md:items-start text-base md:text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-secondary"></i>
+                            <p>Rua Ângelo Marcon, Bairro São Roque, Bento Gonçalves - RS</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-secondary"></i>
+                            <a href="mailto:carossiparts@gmail.com" class="hover:underline">carossiparts@gmail.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-secondary"></i>
+                            <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="hover:underline">+55 54 9 9188-6962</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>© 2025 CarossiParts - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="public/js/scripts.js"></script>
+</body>
+</html>

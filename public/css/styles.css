@@ -1,0 +1,185 @@
+:root {
+    --primary-color: #994000; /* Laranja escuro para a barra de enfeite (WCAG AA) */
+    --secondary-color: #FFDAB9; /* Laranja claro para o enfeite no modo escuro (WCAG AA) */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Otimização de carregamento de fontes */
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.gstatic.com/s/oswald/v18/yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/oswald/v18/yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-.woff2') format('woff2');
+    font-display: swap;
+}
+
+.hero-section {
+    min-height: 100vh; /* Garantir altura mínima */
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif; /* Aplica a nova fonte */
+    font-weight: 700; /* Torna a fonte mais impactante */
+    font-size: 2.5rem; /* Aumenta o tamanho da fonte em 25% (base 2rem) */
+    position: relative;
+    padding-bottom: 1rem; /* Espaço para o sublinhado */
+    display: block; /* Alterado para block para permitir centralização com margin auto */
+    margin-left: auto; /* Centraliza o bloco */
+    margin-right: auto; /* Centraliza o bloco */
+    text-align: center; /* Garante que o texto dentro do bloco seja centralizado */
+    color: #333; /* Define uma cor escura para o texto do título no modo claro */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 50px; /* Largura inicial do sublinhado */
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+
+.section-title:hover::after {
+    width: 100px; /* Largura expandida ao passar o mouse */
+}
+
+.gallery-item {
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-item img {
+    aspect-ratio: 1 / 1; /* Garante que as imagens sejam quadradas */
+}
+
+.object-top {
+    object-position: 50% 15%; /* Ajusta a posição vertical para 15% de cima para baixo */
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark .modal-overlay {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modal-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1010; /* Acima do overlay e do conteúdo */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#modal-prev-btn {
+    left: 20px;
+}
+
+#modal-next-btn {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95vw;
+        max-height: 95vh;
+        /* Adiciona flexbox para melhor alinhamento da imagem */
+        display: flex;
+        flex-direction: column; /* Altera para coluna para melhor empilhamento */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content img {
+        width: 100%;
+        height: auto;
+        max-height: 70vh; /* Limita a altura da imagem para não transbordar */
+        object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    }
+
+    .close-modal {
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.8rem; /* Ajusta o tamanho da fonte para toque */
+    }
+
+    .modal-nav-btn {
+        padding: 0.75rem 1rem; /* Ajusta o padding para toque */
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte para toque */
+    }
+
+    /* Ajusta a posição dos botões de navegação dentro do modal para mobile */
+    .modal-overlay #modal-prev-btn,
+    .modal-overlay #modal-next-btn {
+        position: fixed; /* Fixa a posição na tela */
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1010;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    .modal-overlay #modal-prev-btn {
+        left: 10px;
+    }
+
+    .modal-overlay #modal-next-btn {
+        right: 10px;
+    }
+}
