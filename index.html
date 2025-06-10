@@ -16,9 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.gstatic.com/s/oswald/v18/yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
+<script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -82,7 +81,7 @@
     <nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="public/images/logoquemsomos.png" alt="Logo CarossiParts" class="h-12 md:h-16 lg:h-[4.5rem] mr-4" width="72" height="72">
+                <img src="public/images/logoquemsomos.png" srcset="public/images/logoquemsomos.webp 72w, public/images/logoquemsomos.png 144w" sizes="(max-width: 768px) 72px, 144px" alt="Logo CarossiParts" class="h-12 md:h-16 lg:h-[4.5rem] mr-4" width="72" height="72">
             </div>
             <div class="hidden md:flex space-x-6">
                 <a href="#quem-somos" class="hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Quem somos</a>
@@ -150,7 +149,7 @@
         <div class="container mx-auto">
             <div class="flex flex-col lg:flex-row items-center justify-center">
                 <div class="lg:w-1/3 mb-8 lg:mb-0 lg:pr-8 flex justify-center">
-                    <img src="public/images/logoquemsomos.png" alt="Logo CarossiParts" class="w-48 sm:w-64 md:w-80 lg:w-[30rem] h-auto" width="480" height="160">
+                    <img src="public/images/logoquemsomos.png" srcset="public/images/logoquemsomos.webp 480w, public/images/logoquemsomos.png 960w" sizes="(max-width: 768px) 480px, 960px" alt="Logo CarossiParts" class="w-48 sm:w-64 md:w-80 lg:w-[30rem] h-auto" width="480" height="160">
                 </div>
                 <div class="lg:w-1/3 text-center">
                     <h2 class="section-title text-3xl font-bold mb-6 text-primary dark:text-secondary">Quem somos</h2>
@@ -191,26 +190,20 @@
                     <div class="md:w-1/3 p-6 text-right">
                         <h3 class="text-2xl font-semibold mb-2 text-center dark:text-white">Corneta CarossiParts - Sistema de Admissão Plug & Play</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <strong>Instalação Simplificada:</strong> Sistema Plug & Play com instalação direta no sistema rosqueado original. <br>
-                            Para o modelo CG160 com TBI liso, utilizamos parafusos especiais (inclusos sem custo adicional).
-                        </p>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <strong>Performance Comprovada:</strong> Ganho médio de 1,05 cv testado em dinamômetro, proporcionando melhor resposta do motor e otimização da admissão.
-                        </p>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <strong>Opções Disponíveis:</strong> <br>
-                            <i class="fas fa-ruler-horizontal"></i> Tamanhos 3 cm ou 6 cm de comprimento <br>
-                            <i class="fas fa-palette"></i> Todas as cores disponíveis <br>
-                            Para modelos específicos, envio das medidas com paquímetro pode ser necessário. Após a compra, informe no chat o tamanho e cor desejados.
-                        </p>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <strong>Material de Alta Qualidade:</strong> <br>
-                            Fabricada em PLA biodegradável de alta resistência, testada e aprovada para combustíveis automotivos (álcool e gasolina). <br>
-                            <i class="fas fa-exclamation-triangle"></i> Importante: Não compatível com metanol ou nitrometano, que podem deformar o material.
-                        </p>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <strong>Motores Preparados:</strong> Para motores com preparação, consulte seu preparador antes da instalação para avaliar a necessidade de novo acerto da injeção/carburação.
-                        </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                <strong>Instalação Simplificada</strong> <br>
+                                Com instalação rápida e fácil, a corneta é instalada com apenas 1 parafuso para garantir sua fixação (incluso sem custo adicional), além de acompanhar um manual de instalação.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                <strong>Performance Comprovada</strong> <br>
+                                Ganho médio de 1 cv testado em dinamômetro, proporcionando melhor resposta do motor e otimização da admissão.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                <strong>Material de Alta Qualidade</strong> <br>
+                                Fabricada em ácido polilático (PLA) biodegradável de alta resistência, ou Polietileno Tereftalato Glicol (PETG) também biodegradável, o material depende da cor escolhida na hora da compra mas ambos possuem a mesma resistência e qualidade para esta finalidade. <br>
+                                Testada e aprovada para combustíveis automotivos (álcool e gasolina). <br>
+                                <i class="fas fa-exclamation-triangle"></i> Importante: Não compatível com metanol ou nitrometano, que podem deformar o material e causar avarias estéticas e mecânicas no produto.
+                            </p>
                         <div class="flex space-x-2 justify-end">
                             <span class="bg-primary dark:bg-primary px-3 py-1 rounded-full text-sm text-white">Destaque</span>
                             <span class="bg-primary dark:bg-primary px-3 py-1 rounded-full text-sm text-white">Exclusivo</span>
@@ -228,7 +221,7 @@
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port19.jpg" srcset="public/images/port19.webp 400w, public/images/port19.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Ayrton Senna" class="w-full h-full object-cover cursor-pointer aspect-square object-top" onclick="openModal('public/images/port19.jpg', 'Ayrton Senna', 'Escultura em homenagem ao maior ídolo do automobilismo brasileiro.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/ayrtonsenna.jpg" srcset="public/images/ayrtonsenna.jpg 400w, public/images/ayrtonsenna.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Ayrton Senna" class="w-full h-full object-cover cursor-pointer aspect-square object-top" onclick="openModal('public/images/ayrtonsenna.jpg', 'Ayrton Senna', 'Escultura em homenagem ao maior ídolo do automobilismo brasileiro.')" loading="lazy" width="400" height="400">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
@@ -264,28 +257,54 @@
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port22.webp" srcset="public/images/port22.webp 400w, public/images/port22.webp 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 22" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port22.webp', 'Mini Tigre Decorativo Texturizado', 'Adquira agora o seu Mini Tigre e descubra por que quem compra uma vez, escolhe a CarossiParts para sempre.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port22.png" srcset="public/images/port22.png 400w, public/images/port22.png 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 22" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port22.png', 'Mini Tigre Decorativo Texturizado', 'Adquira agora o seu Mini Tigre e descubra por que quem compra uma vez, escolhe a CarossiParts para sempre.')" loading="lazy" width="400" height="400">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
                     <img src="public/images/port21.jpg" srcset="public/images/port21.webp 400w, public/images/port21.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 21" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port21.jpg', 'Snorkel', 'Snorkel sob medida para quadriciclos.')" loading="lazy" width="400" height="400">
                 </div>
             </div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md relative">
+                    <img id="image26a" src="public/images/port26.jpg" srcset="public/images/port26.webp 400w, public/images/port26.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Gold Eagle" class="w-full h-full object-cover cursor-pointer aspect-square object-top-[10%]" onclick="openModal('public/images/port26.jpg', 'Gold Eagle', 'Águia feita em Ácido Polilático na cor Dourado, com 20cm de altura. Transmite força, liberdade e liderança ao ambiente.')" loading="lazy" width="400" height="400">
+                    <img id="image26b" src="public/images/port26b.jpg" srcset="public/images/port26b.webp 400w, public/images/port26b.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Gold Eagle (Verso)" class="w-full h-full object-cover cursor-pointer aspect-square object-top-[10%] absolute top-0 left-0 hidden" onclick="openModal('public/images/port26b.jpg', 'Gold Eagle (Verso)', 'Águia feita em Ácido Polilático na cor Dourado, com 20cm de altura. Vista de outro ângulo.')" loading="lazy" width="400" height="400">
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        <button id="pauseImage26" class="bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button id="playImage26" class="bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none hidden">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port24.jpg" srcset="public/images/port24.webp 400w, public/images/port24.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Porta chaves" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port24.jpg', 'Porta chaves', 'Porta chaves personalizado, escreva o que quiser. 12cm de comprimento por 3,5 centímetros de altura e 5mm de espessura')" loading="lazy" width="400" height="400">
+                </div>
+                
+                <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                    <img src="public/images/port25.jpg" srcset="public/images/port25.webp 400w, public/images/port25.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Vaso de flor autoirrigável biodegradável" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port25.jpg', 'Vaso de flor autoirrigável biodegradável', 'Vaso de flor auto irrigável biodegradável com alimentação de água lateral - 18cm')" loading="lazy" width="400" height="400">
+                </div>
+            </div>
+            
+            
         </div>
         
         <!-- Modal -->
         <div id="modalOverlay" class="modal-overlay">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <div class="modal-content bg-white dark:bg-gray-800 p-6 rounded-lg max-w-4xl max-h-[80vh] overflow-y-auto">
-                <img id="modalImage" src="" alt="" class="mx-auto max-w-full">
-                <div class="flex justify-between items-center mt-4">
+            <div class="modal-content bg-white dark:bg-gray-800 p-6 rounded-lg">
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="" class="mx-auto max-w-full">
+                </div>
+                <div class="modal-text-content flex-grow flex flex-col justify-center items-center mt-4">
+                    <h3 id="modalTitle" class="text-xl font-bold text-center"></h3>
+                    <p id="modalDescription" class="mt-2 text-center overflow-y-auto"></p>
+                </div>
+                <div class="flex justify-between items-center w-full mt-4">
                     <button id="modal-prev-btn" class="bg-primary hover:bg-secondary text-white p-2 rounded-full focus:outline-none">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <div class="flex-grow">
-                        <h3 id="modalTitle" class="text-xl font-bold text-center"></h3>
-                        <p id="modalDescription" class="mt-2 text-center"></p>
-                    </div>
                     <button id="modal-next-btn" class="bg-primary hover:bg-secondary text-white p-2 rounded-full focus:outline-none">
                         <i class="fas fa-chevron-right"></i>
                     </button>
@@ -302,7 +321,7 @@
             
             <div class="flex flex-col md:flex-row gap-8">
                 <div class="md:w-1/2">
-                    <img src="public/images/orcamento.png" alt="Processo de impressão 3D" class="w-full rounded-lg shadow-md" loading="lazy" width="600" height="400">
+                    <img src="public/images/orcamento.png" srcset="public/images/orcamento.webp 600w, public/images/orcamento.png 1200w" sizes="(max-width: 768px) 600px, 1200px" alt="Processo de impressão 3D" class="w-full rounded-lg shadow-md" loading="lazy" width="600" height="400">
                 </div>
                 
                 <div class="md:w-1/2">
@@ -406,7 +425,7 @@
             <div class="flex flex-col md:flex-row md:justify-between md:items-start md:text-left text-center gap-6 md:gap-8">
                 <!-- Coluna 1: Logo e Descrição -->
                 <div class="flex flex-col items-center md:items-start md:w-1/3 text-center md:text-left">
-                    <img src="public/images/logoquemsomos.png" alt="Logo CarossiParts" class="h-24 sm:h-28 mb-4" loading="lazy" width="112" height="112">
+                    <img src="public/images/logoquemsomos.png" srcset="public/images/logoquemsomos.webp 112w, public/images/logoquemsomos.png 224w" sizes="(max-width: 768px) 112px, 224px" alt="Logo CarossiParts" class="h-24 sm:h-28 mb-4" loading="lazy" width="112" height="112">
                     <p class="max-w-xs mb-4 text-base md:text-sm">Transformamos ideias em realidade com a mais alta tecnologia de impressão 3D.</p>
                     <div class="flex space-x-4 mt-4">
                         <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="hover:text-primary dark:hover:text-secondary transition">

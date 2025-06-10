@@ -7,22 +7,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Otimização de carregamento de fontes */
-@font-face {
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    src: url('https://fonts.gstatic.com/s/oswald/v18/yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-.woff2') format('woff2');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 700;
-    src: url('https://fonts.gstatic.com/s/oswald/v18/yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-yKzYJjKKJ-.woff2') format('woff2');
-    font-display: swap;
-}
 
 .hero-section {
     min-height: 100vh; /* Garantir altura mínima */
@@ -77,7 +61,7 @@ body {
 }
 
 .modal-overlay {
-    display: none;
+    display: none; /* Revertido para none */
     position: fixed;
     top: 0;
     left: 0;
@@ -87,6 +71,8 @@ body {
     z-index: 1000;
     justify-content: center;
     align-items: center;
+    width: 100vw; /* Ocupa toda a largura da viewport */
+    height: 100vh; /* Ocupa toda a altura da viewport */
 }
 
 .dark .modal-overlay {
@@ -94,8 +80,38 @@ body {
 }
 
 .modal-content {
-    max-width: 90%;
-    max-height: 90%;
+    width: 90%; /* Permite que o conteúdo ocupe a largura */
+    height: 90%; /* Permite que o conteúdo ocupe a altura */
+    display: flex;
+    flex-direction: column; /* Organiza imagem e legenda em coluna */
+    justify-content: space-between; /* Distribui espaço entre imagem e legenda */
+    align-items: center;
+    padding: 1.5rem; /* Ajusta o padding */
+    box-sizing: border-box; /* Inclui padding na largura/altura */
+}
+
+.modal-image-container {
+    flex-grow: 1; /* Permite que o contêiner da imagem cresça */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 70%; /* Limita a altura da imagem para dar espaço à legenda */
+    overflow: hidden; /* Garante que a imagem não transborde */
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}
+
+.modal-text-content {
+    flex-shrink: 0; /* Impede que o texto encolha */
+    width: 100%;
+    max-height: 30%; /* Limita a altura da legenda */
+    overflow-y: auto; /* Adiciona barra de rolagem se a legenda for muito longa */
+    padding: 10px 0; /* Adiciona um pouco de padding vertical */
 }
 
 .close-modal {
@@ -136,20 +152,21 @@ body {
 
 @media (max-width: 768px) {
     .modal-content {
-        max-width: 95vw;
-        max-height: 95vh;
-        /* Adiciona flexbox para melhor alinhamento da imagem */
+        width: 95vw;
+        height: 95vh;
         display: flex;
-        flex-direction: column; /* Altera para coluna para melhor empilhamento */
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
+        padding: 1rem; /* Ajusta o padding para mobile */
     }
 
-    .modal-content img {
-        width: 100%;
-        height: auto;
-        max-height: 70vh; /* Limita a altura da imagem para não transbordar */
-        object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    .modal-image-container {
+        max-height: 60%; /* Ajusta a altura da imagem para mobile */
+    }
+
+    .modal-text-content {
+        max-height: 40%; /* Ajusta a altura da legenda para mobile */
     }
 
     .close-modal {
@@ -182,4 +199,10 @@ body {
     .modal-overlay #modal-next-btn {
         right: 10px;
     }
+}
+
+/* Estilos para o modal no modo escuro */
+.dark .modal-content h3,
+.dark .modal-content p {
+    color: white;
 }

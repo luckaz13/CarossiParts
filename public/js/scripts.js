@@ -162,3 +162,40 @@ nextMediaButton.addEventListener('click', () => {
 
 // Initialize with the first media element visible
 showMedia(currentMediaIndex);
+
+// Image 26a/26b Toggle
+const image26a = document.getElementById('image26a');
+const image26b = document.getElementById('image26b');
+
+if (image26a && image26b) {
+    let currentImage26 = 0;
+    const images26 = [image26a, image26b];
+    let intervalId26;
+
+    const pauseButton = document.getElementById('pauseImage26');
+    const playButton = document.getElementById('playImage26');
+
+    function toggleImage26() {
+        images26[currentImage26].classList.add('hidden');
+        currentImage26 = (currentImage26 + 1) % images26.length;
+        images26[currentImage26].classList.remove('hidden');
+    }
+
+    function startCarousel26() {
+        intervalId26 = setInterval(toggleImage26, 3000);
+        pauseButton.classList.remove('hidden');
+        playButton.classList.add('hidden');
+    }
+
+    function stopCarousel26() {
+        clearInterval(intervalId26);
+        pauseButton.classList.add('hidden');
+        playButton.classList.remove('hidden');
+    }
+
+    // Start automatically
+    startCarousel26();
+
+    pauseButton.addEventListener('click', stopCarousel26);
+    playButton.addEventListener('click', startCarousel26);
+}
