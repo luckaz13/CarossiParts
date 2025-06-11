@@ -319,16 +319,66 @@ if (contactForm) {
     const submitButton = contactForm.querySelector('button[type="submit"]');
     const originalButtonContent = submitButton.innerHTML;
 
+    // Funções de feedback visual
+    function applyFocusStyle(inputElement) {
+        inputElement.classList.add('form-field-focused');
+    }
+
+    function removeFocusStyle(inputElement) {
+        inputElement.classList.remove('form-field-focused');
+    }
+
+    function updateValidationFeedback(inputElement, isValid, message = '') {
+        const wrapper = inputElement.closest('.form-field-wrapper');
+        if (!wrapper) return;
+
+        const checkIcon = wrapper.querySelector('.fa-check');
+        const timesIcon = wrapper.querySelector('.fa-times');
+        const feedbackMessage = wrapper.querySelector('.validation-message');
+
+        // Limpa estados anteriores
+        inputElement.classList.remove('form-field-valid', 'form-field-invalid');
+        inputElement.removeAttribute('aria-invalid');
+        if (checkIcon) checkIcon.classList.add('hidden');
+        if (timesIcon) timesIcon.classList.add('hidden');
+        if (feedbackMessage) {
+            feedbackMessage.classList.add('hidden');
+            feedbackMessage.textContent = '';
+        }
+
+        if (isValid) {
+            inputElement.classList.add('form-field-valid');
+            if (checkIcon) checkIcon.classList.remove('hidden');
+        } else {
+            inputElement.classList.add('form-field-invalid');
+            inputElement.setAttribute('aria-invalid', 'true');
+            if (timesIcon) timesIcon.classList.remove('hidden');
+            if (feedbackMessage && message) {
+                feedbackMessage.textContent = message;
+                feedbackMessage.classList.remove('hidden');
+            }
+        }
+    }
+
+    function markAsInvalid(inputElement, message = 'Campo obrigatório.') {
+        updateValidationFeedback(inputElement, false, message);
+    }
+
+    function markAsValid(inputElement) {
+        updateValidationFeedback(inputElement, true);
+    }
+
+    function isValidEmail(email) {
+        // Basic email validation regex
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
     contactForm.addEventListener('submit', function(event) {
-        // A validação do formulário será feita pelo HTML5 'required' e pelo Formsubmit.co.
-        // O JavaScript abaixo é mantido apenas para feedback visual de validação.
+        let isValid = true;
 
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
-        const phoneInput = document.getElementById('phone');
         const messageInput = document.getElementById('message');
-
-        let isValid = true;
 
         // Validate Name
         if (nameInput.value.trim() === '') {
@@ -340,7 +390,7 @@ if (contactForm) {
 
         // Validate Email
         if (!isValidEmail(emailInput.value)) {
-            markAsInvalid(emailInput);
+            markAsInvalid(emailInput, 'Por favor, insira um e-mail válido.');
             isValid = false;
         } else {
             markAsValid(emailInput);
@@ -358,52 +408,40 @@ if (contactForm) {
             event.preventDefault(); // Previne o envio se a validação JS falhar
             alert('Por favor, preencha todos os campos obrigatórios corretamente.');
         } else {
-            // Se a validação JS passar, permite o envio padrão do formulário para o Formsubmit.co
             // Show loading state
             submitButton.disabled = true;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando...';
             submitButton.classList.add('opacity-70', 'cursor-not-allowed');
-            // O Formsubmit.co fará o redirecionamento ou exibirá sua própria mensagem de sucesso/erro.
-            // Não precisamos de um setTimeout aqui, pois o envio é real.
         }
     });
 
     // Add real-time validation feedback on input change/blur
     const formInputs = contactForm.querySelectorAll('input, textarea');
     formInputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            applyFocusStyle(input);
+        });
+
         input.addEventListener('blur', () => {
+            removeFocusStyle(input);
             if (input.id === 'email') {
                 if (!isValidEmail(input.value)) {
-                    markAsInvalid(input);
+                    markAsInvalid(input, 'Por favor, insira um e-mail válido.');
                 } else {
                     markAsValid(input);
                 }
-            } else if (input.value.trim() === '') {
+            } else if (input.hasAttribute('required') && input.value.trim() === '') {
                 markAsInvalid(input);
             } else {
                 markAsValid(input);
             }
         });
+
         input.addEventListener('input', () => {
-            // Clear validation state on input for immediate feedback
-            input.classList.remove('border-green-500', 'border-red-500');
+            // Limpa o feedback de validação ao digitar
+            updateValidationFeedback(input, true); // Assume válido temporariamente
         });
     });
-}
-
-function markAsInvalid(inputElement) {
-    inputElement.classList.remove('border-green-500');
-    inputElement.classList.add('border-red-500');
-}
-
-function markAsValid(inputElement) {
-    inputElement.classList.remove('border-red-500');
-    inputElement.classList.add('border-green-500');
-}
-
-function isValidEmail(email) {
-    // Basic email validation regex
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 // Back to Top Button
 const backToTopBtn = document.getElementById('backToTopBtn');

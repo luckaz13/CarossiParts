@@ -1,6 +1,7 @@
 :root {
     --primary-color: #994000; /* Laranja escuro para a barra de enfeite (WCAG AA) */
     --secondary-color: #FFDAB9; /* Laranja claro para o enfeite no modo escuro (WCAG AA) */
+    --dark-mode-title-orange: #FF5722; /* Laranja mais vivo para títulos no modo escuro */
 }
 
 body {
@@ -48,8 +49,8 @@ body {
 }
 
 .gallery-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item img {
@@ -192,6 +193,10 @@ body {
     color: white;
 }
 
+.dark .section-title {
+    color: var(--dark-mode-title-orange); /* Aplica o laranja vivo aos títulos no modo escuro */
+}
+
 /* Animações para o Menu Mobile */
 .mobile-menu-fade-in {
     animation: fadeInMenu 0.3s ease-out forwards;
@@ -217,4 +222,66 @@ body {
 
 .will-change-opacity {
     will-change: opacity;
+}
+
+/* Acessibilidade: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Estilo para campos em foco */
+.form-field-focused {
+    box-shadow: 0 0 0 3px rgba(128, 128, 128, 0.3); /* Cinza suave com opacidade */
+    border-color: #cccccc; /* Cinza claro */
+}
+
+/* Estilos para validação */
+.form-field-valid {
+    border-color: #28a745; /* Verde para sucesso */
+    padding-right: 2.5rem; /* Espaço para o ícone */
+}
+
+.form-field-invalid {
+    border-color: #dc3545; /* Vermelho para erro */
+    padding-right: 2.5rem; /* Espaço para o ícone */
+}
+
+/* Estilos para o contêiner do campo para posicionamento de ícones/mensagens */
+.form-field-wrapper {
+    position: relative;
+}
+
+.validation-icon {
+    position: absolute;
+    right: 10px; /* Ajusta a posição do ícone dentro do campo */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    pointer-events: none; /* Garante que o ícone não interfira com o clique no input */
+}
+
+.validation-message {
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+    padding-left: 0.25rem;
+}
+
+/* Cores Tailwind para uso no JS (já definidas no tailwind.config.js, mas para clareza) */
+/* .text-green-500 { color: #28a745; } */
+/* .text-red-500 { color: #dc3545; } */
+
+.store-card {
+    transition: all 0.3s ease-in-out;
+}
+
+.store-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
