@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! - CarossiParts</title>
+    <link rel="icon" href="public/images/logoquemsomos.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800 transition-colors duration-300 flex flex-col min-h-screen">
+    <!-- Navigation (Optional - can be simplified or removed for a thank you page) -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="public/images/logoquemsomos.png" srcset="public/images/logoquemsomos.webp 72w, public/images/logoquemsomos.png 144w" sizes="(max-width: 768px) 72px, 144px" alt="Logo CarossiParts" class="h-12 md:h-16 lg:h-[4.5rem] mr-4" width="72" height="72" loading="lazy">
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html#quem-somos" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Quem somos</a>
+                <a href="index.html#trabalhos" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Trabalhos</a>
+                <a href="index.html#orcamentos" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Orçamentos</a>
+                <a href="index.html#onde-comprar" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Onde comprar</a>
+                <a href="index.html#faq" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">FAQ</a>
+            </div>
+            <div class="flex items-center">
+                <button id="darkModeToggle" class="p-2 rounded-full focus:outline-none" aria-label="Alternar modo escuro">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline text-white"></i>
+                </button>
+                <button id="mobileMenuButton" class="md:hidden p-2 focus:outline-none dark:text-white" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu mobile">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 w-full px-4 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html#quem-somos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Quem somos</a>
+                <a href="index.html#trabalhos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Trabalhos</a>
+                <a href="index.html#orcamentos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Orçamentos</a>
+                <a href="index.html#onde-comprar" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Onde comprar</a>
+                <a href="index.html#faq" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center text-center px-4 py-16">
+        <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg max-w-md w-full">
+            <i class="fas fa-check-circle text-green-500 text-6xl mb-6"></i>
+            <h1 class="text-3xl font-bold text-primary dark:text-secondary mb-4">Orçamento Enviado com Sucesso!</h1>
+            <p class="text-gray-700 dark:text-gray-300 mb-6">Agradecemos o seu contato. Em breve, nossa equipe entrará em contato com você para dar andamento à sua solicitação.</p>
+            <a href="index.html" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 inline-flex items-center">
+                <i class="fas fa-home mr-2"></i> Voltar para a Página Inicial
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4 dark:bg-gray-900">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start md:text-left text-center gap-6 md:gap-8">
+                <!-- Logo e Descrição -->
+                <div class="flex flex-col items-center md:items-start md:w-1/3 text-center md:text-left">
+                    <img src="public/images/logoquemsomos.png" alt="Logo CarossiParts" class="h-16 mb-4" width="72" height="72" loading="lazy">
+                    <p class="text-gray-400 text-sm">Transformando suas ideias em realidade com impressões 3D de alta qualidade.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://shopee.com.br/shop/637588572" target="_blank" class="text-gray-400 hover:text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-6 hover:scale-105" aria-label="Shopee">
+                            <i class="fas fa-store text-2xl"></i>
+                        </a>
+                        <a href="https://lista.mercadolivre.com.br/_CustId_192984959?item_id=MLB5161827074&category_id=MLB22655&seller_id=192984959&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" class="text-gray-400 hover:text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-6 hover:scale-105" aria-label="Mercado Livre">
+                            <i class="fab fa-shopify text-2xl"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="text-gray-400 hover:text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-6 hover:scale-105" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/carossiparts/" target="_blank" class="text-gray-400 hover:text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-6 hover:scale-105" aria-label="Instagram">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links Rápidos -->
+                <div class="md:w-1/3 mt-8 md:mt-0 text-center md:text-left">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Links Rápidos</h3>
+                    <ul class="space-y-2 text-base md:text-sm">
+                        <li><a href="index.html#quem-somos" class="text-gray-400 hover:text-white transition duration-300">Quem somos</a></li>
+                        <li><a href="index.html#trabalhos" class="text-gray-400 hover:text-white transition duration-300">Trabalhos</a></li>
+                        <li><a href="index.html#orcamentos" class="text-gray-400 hover:text-white transition duration-300">Orçamentos</a></li>
+                        <li><a href="index.html#onde-comprar" class="text-gray-400 hover:text-white transition duration-300">Onde comprar</a></li>
+                        <li><a href="index.html#faq" class="text-gray-400 hover:text-white transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contato -->
+                <div class="md:w-1/3 mt-8 md:mt-0 text-center md:text-left">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Contato</h3>
+                    <div class="space-y-2 flex flex-col items-center md:items-start text-base md:text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-400 mr-2 mt-1"></i>
+                            <p class="text-gray-400">Rua Ângelo Marcon, Bento Gonçalves - RS</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-gray-400 mr-2"></i>
+                            <p class="text-gray-400">+55 54 9 9188-6962</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-2"></i>
+                            <p class="text-gray-400">carossiparts@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 CarossiParts. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="public/js/scripts.js"></script>
+</body>
+</html>

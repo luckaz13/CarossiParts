@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lucascarossi.github.io/CarossiParts/sitemap.xml

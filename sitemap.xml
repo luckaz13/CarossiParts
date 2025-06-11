@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <lastmod>2025-06-11T01:08:58+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Imagens -->
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/ayrtonsenna.jpg</image:loc>
+      <image:caption>Ayrton Senna</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/fundohero.jpg</image:loc>
+      <image:caption>Fundo Hero</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/logohero.png</image:loc>
+      <image:caption>Logo Hero</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/logohero.webp</image:loc>
+      <image:caption>Logo Hero WebP</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/logoquemsomos.png</image:loc>
+      <image:caption>Logo Quem Somos</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/orcamento.png</image:loc>
+      <image:caption>Orçamento</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port1.jpg</image:loc>
+      <image:caption>Portfólio 1</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port2.jpg</image:loc>
+      <image:caption>Portfólio 2</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port6.jpg</image:loc>
+      <image:caption>Portfólio 6</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port7.jpg</image:loc>
+      <image:caption>Portfólio 7</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port8.jpg</image:loc>
+      <image:caption>Portfólio 8</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port9.jpg</image:loc>
+      <image:caption>Portfólio 9</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port10.jpg</image:loc>
+      <image:caption>Portfólio 10</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port11.jpg</image:loc>
+      <image:caption>Portfólio 11</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port13.jpg</image:loc>
+      <image:caption>Portfólio 13</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port14.jpg</image:loc>
+      <image:caption>Portfólio 14</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port15.jpg</image:loc>
+      <image:caption>Portfólio 15</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port16.jpg</image:loc>
+      <image:caption>Portfólio 16</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port17.jpg</image:loc>
+      <image:caption>Portfólio 17</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port18.jpg</image:loc>
+      <image:caption>Portfólio 18</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port19.jpg</image:loc>
+      <image:caption>Portfólio 19</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port20.jpg</image:loc>
+      <image:caption>Portfólio 20</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port21.jpg</image:loc>
+      <image:caption>Portfólio 21</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port22.png</image:loc>
+      <image:caption>Portfólio 22 PNG</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port22.webp</image:loc>
+      <image:caption>Portfólio 22 WebP</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port23.webp</image:loc>
+      <image:caption>Portfólio 23 WebP</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port24.jpg</image:loc>
+      <image:caption>Portfólio 24</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port25.jpg</image:loc>
+      <image:caption>Portfólio 25</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port26.jpg</image:loc>
+      <image:caption>Portfólio 26</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/port26b.jpg</image:loc>
+      <image:caption>Portfólio 26b</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <image:image>
+      <image:loc>https://lucascarossi.github.io/CarossiParts/public/images/trabalhodestaque.jpg</image:loc>
+      <image:caption>Trabalho Destaque</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Vídeos -->
+  <url>
+    <loc>https://lucascarossi.github.io/CarossiParts/index.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://lucascarossi.github.io/CarossiParts/public/images/fundohero.jpg</video:thumbnail_loc>
+      <video:title>Vídeo Corneta</video:title>
+      <video:description>Vídeo de demonstração de corneta.</video:description>
+      <video:content_loc>https://lucascarossi.github.io/CarossiParts/public/videos/corneta.mp4</video:content_loc>
+      <video:player_loc>https://lucascarossi.github.io/CarossiParts/index.html</video:player_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2025-06-11T01:08:58+00:00</video:publication_date>
+    </video:video>
+  </url>
+
+</urlset>

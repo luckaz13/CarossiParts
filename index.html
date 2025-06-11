@@ -12,6 +12,7 @@
     <meta property="og:url" content="https://carossiparts.com.br">
     <meta property="og:type" content="website">
     <title>CarossiParts - Impressões 3D Personalizadas</title>
+    <link rel="icon" href="public/images/logoquemsomos.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +33,36 @@
                         instagram: '#E1306C',
                         'orange-light': '#FFDAB9',
                         'orange-dark': '#FFA07A',
-                    }
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideInUp: {
+                            '0%': { transform: 'translateY(100%)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideOutDown: {
+                            '0%': { transform: 'translateY(0)', opacity: '1' },
+                            '100%': { transform: 'translateY(100%)', opacity: '0' },
+                        },
+                        fadeInMenu: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeOutMenu: {
+                            '0%': { opacity: '1', transform: 'translateY(0)' },
+                            '100%': { opacity: '0', transform: 'translateY(-10px)' },
+                        },
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'slide-in-up': 'slideInUp 0.5s ease-out forwards',
+                        'slide-out-down': 'slideOutDown 0.5s ease-in forwards',
+                        'fade-in-menu': 'fadeInMenu 0.3s ease-out forwards',
+                        'fade-out-menu': 'fadeOutMenu 0.3s ease-in forwards',
+                    },
                 }
             }
         }
@@ -75,26 +105,53 @@
   ]
 }
     </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Product",
+      "name": "Corneta CarossiParts - Sistema de Admissão Plug & Play",
+      "image": "http://www.carossiparts.com.br/public/images/trabalhodestaque.jpg",
+      "description": "Com instalação rápida e fácil, a corneta é instalada com apenas 1 parafuso para garantir sua fixação (incluso sem custo adicional), além de acompanhar um manual de instalação. Ganho médio de 1 cv testado em dinamômetro, proporcionando melhor resposta do motor e otimização da admissão. Fabricada em ácido polilático (PLA) biodegradável de alta resistência, ou Polietileno Tereftalato Glicol (PETG) também biodegradável, o material depende da cor escolhida na hora da compra mas ambos possuem a mesma resistência e qualidade para esta finalidade. Testada e aprovada para combustíveis automotivos (álcool e gasolina). Importante: Não compatível com metanol ou nitrometano, que podem deformar o material e causar avarias estéticas e mecânicas no produto.",
+      "brand": {
+        "@type": "Brand",
+        "name": "CarossiParts"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://shopee.com.br/shop/637588572",
+        "priceCurrency": "BRL",
+        "price": "0.00",
+        "itemCondition": "http://schema.org/NewCondition",
+        "availability": "http://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "CarossiParts"
+        }
+      }
+    }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800 transition-colors duration-300">
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="public/images/logoquemsomos.png" srcset="public/images/logoquemsomos.webp 72w, public/images/logoquemsomos.png 144w" sizes="(max-width: 768px) 72px, 144px" alt="Logo CarossiParts" class="h-12 md:h-16 lg:h-[4.5rem] mr-4" width="72" height="72">
+                <img src="public/images/logoquemsomos.png" srcset="public/images/logoquemsomos.webp 72w, public/images/logoquemsomos.png 144w" sizes="(max-width: 768px) 72px, 144px" alt="Logo CarossiParts" class="h-12 md:h-16 lg:h-[4.5rem] mr-4" width="72" height="72" loading="lazy">
             </div>
             <div class="hidden md:flex space-x-6">
-                <a href="#quem-somos" class="hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Quem somos</a>
-                <a href="#trabalhos" class="hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Trabalhos</a>
-                <a href="#orcamentos" class="hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Orçamentos</a>
-                <a href="#onde-comprar" class="hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Onde comprar</a>
+                <a href="#quem-somos" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Quem somos</a>
+                <a href="#trabalhos" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Trabalhos</a>
+                <a href="#orcamentos" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Orçamentos</a>
+                <a href="#onde-comprar" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Onde comprar</a>
+                <a href="#faq" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">FAQ</a>
             </div>
             <div class="flex items-center">
-                <button id="darkModeToggle" class="p-2 rounded-full focus:outline-none">
+                <button id="darkModeToggle" class="p-2 rounded-full focus:outline-none" aria-label="Alternar modo escuro">
                     <i class="fas fa-moon dark:hidden"></i>
                     <i class="fas fa-sun hidden dark:inline text-white"></i>
                 </button>
-                <button id="mobileMenuButton" class="md:hidden p-2 focus:outline-none dark:text-white">
+                <button id="mobileMenuButton" class="md:hidden p-2 focus:outline-none dark:text-white" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu mobile">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
@@ -102,10 +159,11 @@
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 w-full px-4 pb-4">
             <div class="flex flex-col space-y-3">
-                <a href="#quem-somos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Quem somos</a>
-                <a href="#trabalhos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Trabalhos</a>
-                <a href="#orcamentos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Orçamentos</a>
-                <a href="#onde-comprar" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition font-bold dark:text-white">Onde comprar</a>
+                <a href="#quem-somos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Quem somos</a>
+                <a href="#trabalhos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Trabalhos</a>
+                <a href="#orcamentos" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Orçamentos</a>
+                <a href="#onde-comprar" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">Onde comprar</a>
+                <a href="#faq" class="block py-2 border-b border-gray-200 dark:border-gray-700 hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 font-bold dark:text-white">FAQ</a>
             </div>
         </div>
     </nav>
@@ -113,32 +171,32 @@
     <!-- Hero Section -->
     <section class="hero-section min-h-screen flex flex-col items-center justify-center text-white text-center px-4 relative">
         <!-- Imagem de fundo -->
-        <img src="public/images/fundohero.jpg" alt="Fundo Hero" class="absolute inset-0 w-full h-full object-cover -z-10" width="1920" height="1080">
+        <img src="public/images/fundohero.jpg" srcset="public/images/fundohero.jpg 1200w, public/images/fundohero.jpg 1920w" sizes="100vw" alt="Fundo Hero" class="absolute inset-0 w-full h-full object-cover -z-10" width="1920" height="1080" loading="lazy">
         <div class="absolute inset-0 bg-black bg-opacity-60 -z-10"></div>
         
-        <img src="public/images/logohero.webp" alt="Banner principal CarossiParts" class="w-60 sm:w-80 md:w-[25rem] lg:w-[37.5rem] mb-6 animate-fade-in" width="480" height="160">
+        <img src="public/images/logohero.webp" srcset="public/images/logohero.webp 480w, public/images/logohero.png 960w" sizes="(max-width: 768px) 480px, 960px" alt="Banner principal CarossiParts" class="w-60 sm:w-80 md:w-[25rem] lg:w-[37.5rem] mb-6 animate-fade-in" width="480" height="160">
         <h2 class="text-xl md:text-2xl mb-8 font-bold">A fábrica das suas ideias começa aqui</h2>
         
         <div class="flex flex-wrap justify-center gap-4 mb-10">
-            <a href="https://shopee.com.br/shop/637588572" target="_blank" class="bg-shopee rounded-full p-3 hover:opacity-80 transition duration-300">
+            <a href="https://shopee.com.br/shop/637588572" target="_blank" class="bg-shopee rounded-full p-3 hover:opacity-80 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-6 hover:scale-105">
                 <i class="fas fa-store text-white text-2xl"></i>
             </a>
-            <a href="https://lista.mercadolivre.com.br/_CustId_192984959?item_id=MLB5161827074&category_id=MLB22655&seller_id=192984959&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" class="bg-mercadolivre rounded-full p-3 hover:opacity-80 transition duration-300">
+            <a href="https://lista.mercadolivre.com.br/_CustId_192984959?item_id=MLB5161827074&category_id=MLB22655&seller_id=192984959&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" class="bg-mercadolivre rounded-full p-3 hover:opacity-80 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-6 hover:scale-105">
                 <i class="fab fa-shopify text-white text-2xl"></i>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="bg-whatsapp rounded-full p-3 hover:opacity-80 transition duration-300">
+            <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="bg-whatsapp rounded-full p-3 hover:opacity-80 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-6 hover:scale-105">
                 <i class="fab fa-whatsapp text-white text-2xl"></i>
             </a>
-            <a href="https://www.instagram.com/carossiparts/" target="_blank" class="bg-instagram rounded-full p-3 hover:opacity-80 transition duration-300">
+            <a href="https://www.instagram.com/carossiparts/" target="_blank" class="bg-instagram rounded-full p-3 hover:opacity-80 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-6 hover:scale-105">
                 <i class="fab fa-instagram text-white text-2xl"></i>
             </a>
         </div>
         
         <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 w-full md:w-auto px-4 sm:px-0">
-            <a href="#orcamentos" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+            <a href="#orcamentos" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 flex items-center justify-center">
                 <i class="fas fa-lightbulb mr-2"></i> Comece seu projeto
             </a>
-            <a href="#trabalhos" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+            <a href="#trabalhos" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105 flex items-center justify-center">
                 <i class="fas fa-images mr-2"></i> Ver trabalhos
             </a>
         </div>
@@ -149,7 +207,7 @@
         <div class="container mx-auto">
             <div class="flex flex-col lg:flex-row items-center justify-center">
                 <div class="lg:w-1/3 mb-8 lg:mb-0 lg:pr-8 flex justify-center">
-                    <img src="public/images/logoquemsomos.png" srcset="public/images/logoquemsomos.webp 480w, public/images/logoquemsomos.png 960w" sizes="(max-width: 768px) 480px, 960px" alt="Logo CarossiParts" class="w-48 sm:w-64 md:w-80 lg:w-[30rem] h-auto" width="480" height="160">
+                    <img src="public/images/logoquemsomos.png" srcset="public/images/logoquemsomos.webp 480w, public/images/logoquemsomos.png 960w" sizes="(max-width: 768px) 480px, 960px" alt="Logo CarossiParts" class="w-48 sm:w-64 md:w-80 lg:w-[30rem] h-auto" width="480" height="160" loading="lazy">
                 </div>
                 <div class="lg:w-1/3 text-center">
                     <h2 class="section-title text-3xl font-bold mb-6 text-primary dark:text-secondary">Quem somos</h2>
@@ -170,40 +228,39 @@
             <p class="text-center mb-12 max-w-xl mx-auto dark:text-white">Conheça alguns dos nossos projetos realizados, desde peças técnicas até objetos decorativos e acessórios personalizados.</p>
             
             <!-- Featured Project -->
-            <div class="mb-12 bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+            <div class="mb-12 bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg" role="region" aria-label="Carrossel de Mídia em Destaque">
                 <div class="md:flex">
                     <div class="md:w-2/3 relative">
-                        <div id="featuredMediaContainer" class="w-full h-[700px] flex items-center justify-center">
-                            <img id="featuredImage" src="public/images/trabalhodestaque.jpg" alt="Trabalho em Destaque" class="w-full h-full object-cover cursor-pointer" onclick="openModal('public/images/trabalhodestaque.jpg', 'Trabalho em Destaque', 'Confira este trabalho especial em nossa galeria.')" loading="lazy" width="700" height="700">
+                        <div id="featuredMediaContainer" class="w-full h-[700px] flex items-center justify-center" aria-live="polite">
+                            <img id="featuredImage" src="public/images/trabalhodestaque.jpg" srcset="public/images/trabalhodestaque.webp 700w, public/images/trabalhodestaque.jpg 1400w" sizes="(max-width: 768px) 700px, 1400px" alt="Trabalho em Destaque" class="w-full h-full object-cover cursor-pointer gallery-item-trigger" data-src="public/images/trabalhodestaque.jpg" data-title="Trabalho em Destaque" data-description="Confira este trabalho especial em nossa galeria." width="700" height="700" loading="lazy">
                             <video id="featuredVideo" controls muted class="w-full h-full object-cover object-top-[20%] hidden" poster="public/images/trabalhodestaque.jpg">
                                 <source src="public/videos/corneta.mp4" type="video/mp4">
                                 Seu navegador não suporta o elemento de vídeo.
                             </video>
                         </div>
-                        <button id="prevMedia" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none">
+                        <button id="prevMedia" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none" aria-label="Mídia anterior">
                             <i class="fas fa-chevron-left"></i>
                         </button>
-                        <button id="nextMedia" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none">
+                        <button id="nextMedia" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none" aria-label="Próxima mídia">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
                     <div class="md:w-1/3 p-6 text-right">
                         <h3 class="text-2xl font-semibold mb-2 text-center dark:text-white">Corneta CarossiParts - Sistema de Admissão Plug & Play</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                <strong>Instalação Simplificada</strong> <br>
-                                Com instalação rápida e fácil, a corneta é instalada com apenas 1 parafuso para garantir sua fixação (incluso sem custo adicional), além de acompanhar um manual de instalação.
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                <strong>Performance Comprovada</strong> <br>
-                                Ganho médio de 1 cv testado em dinamômetro, proporcionando melhor resposta do motor e otimização da admissão.
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                <strong>Material de Alta Qualidade</strong> <br>
-                                Fabricada em ácido polilático (PLA) biodegradável de alta resistência, ou Polietileno Tereftalato Glicol (PETG) também biodegradável, o material depende da cor escolhida na hora da compra mas ambos possuem a mesma resistência e qualidade para esta finalidade. <br>
-                                Testada e aprovada para combustíveis automotivos (álcool e gasolina). <br>
-                                <i class="fas fa-exclamation-triangle"></i> Importante: Não compatível com metanol ou nitrometano, que podem deformar o material e causar avarias estéticas e mecânicas no produto.
-                            </p>
+                            <strong>Instalação Simplificada</strong> <br>
+                            Com instalação rápida e fácil, a corneta é instalada com apenas 1 parafuso para garantir sua fixação (incluso sem custo adicional), além de acompanhar um manual de instalação.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <strong>Performance Comprovada</strong> <br>
+                            Ganho médio de 1 cv testado em dinamômetro, proporcionando melhor resposta do motor e otimização da admissão.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <strong>Material de Alta Qualidade</strong> <br>
+                            Fabricada em ácido polilático (PLA) biodegradável de alta resistência, ou Polietileno Tereftalato Glicol (PETG) também biodegradável, o material depende da cor escolhida na hora da compra mas ambos possuem a mesma resistência e qualidade para esta finalidade. <br>
+                            Testada e aprovada para combustíveis automotivos (álcool e gasolina). <br>
+                            <i class="fas fa-exclamation-triangle"></i> Importante: Não compatível com metanol ou nitrometano, que podem deformar o material e causar avarias estéticas e mecânicas no produto.
+                        </p>
                         <div class="flex space-x-2 justify-end">
                             <span class="bg-primary dark:bg-primary px-3 py-1 rounded-full text-sm text-white">Destaque</span>
                             <span class="bg-primary dark:bg-primary px-3 py-1 rounded-full text-sm text-white">Exclusivo</span>
@@ -217,73 +274,73 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Imagens da Galeria -->
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port17.jpg" srcset="public/images/port17.webp 400w, public/images/port17.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 17" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port17.jpg', 'Walter White', 'Personagem da série Breaking Bad em impressão 3D de alta qualidade. Pintado à mão.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port17.jpg" srcset="public/images/port17.webp 400w, public/images/port17.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 17" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port17.jpg" data-title="Walter White" data-description="Personagem da série Breaking Bad em impressão 3D de alta qualidade. Pintado à mão." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/ayrtonsenna.jpg" srcset="public/images/ayrtonsenna.jpg 400w, public/images/ayrtonsenna.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Ayrton Senna" class="w-full h-full object-cover cursor-pointer aspect-square object-top" onclick="openModal('public/images/ayrtonsenna.jpg', 'Ayrton Senna', 'Escultura em homenagem ao maior ídolo do automobilismo brasileiro.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/ayrtonsenna.jpg" srcset="public/images/ayrtonsenna.jpg 400w, public/images/ayrtonsenna.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Ayrton Senna" class="w-full h-full object-cover cursor-pointer aspect-square object-top gallery-item-trigger" data-src="public/images/ayrtonsenna.jpg" data-title="Ayrton Senna" data-description="Escultura em homenagem ao maior ídolo do automobilismo brasileiro." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port18.jpg" srcset="public/images/port18.webp 400w, public/images/port18.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Dr. Salvador - Resident Evil 4" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port18.jpg', 'Dr. Salvador - Resident Evil 4 – Escala 1/8 (18 cm)', 'Miniatura do personagem Dr. Salvador, do jogo Resident Evil 4, em escala 1/8 com 18 cm de altura. Impressão de alta resolução, pintada à mão, com destaque para os detalhes da motosserra, do tecido desgastado e da máscara ensanguentada. Peça colecionável para fãs de jogos e cultura pop.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port18.jpg" srcset="public/images/port18.webp 400w, public/images/port18.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Dr. Salvador - Resident Evil 4" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port18.jpg" data-title="Dr. Salvador - Resident Evil 4 – Escala 1/8 (18 cm)" data-description="Miniatura do personagem Dr. Salvador, do jogo Resident Evil 4, em escala 1/8 com 18 cm de altura. Impressão de alta resolução, pintada à mão, com destaque para os detalhes da motosserra, do tecido desgastado e da máscara ensanguentada. Peça colecionável para fãs de jogos e cultura pop." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port13.jpg" srcset="public/images/port13.webp 400w, public/images/port13.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 13" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port13.jpg', 'Jesus Cristo', 'Representação artística de Jesus Cristo em impressão 3D.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port13.jpg" srcset="public/images/port13.webp 400w, public/images/port13.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 13" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port13.jpg" data-title="Jesus Cristo" data-description="Representação artística de Jesus Cristo em impressão 3D." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port14.jpg" srcset="public/images/port14.webp 400w, public/images/port14.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 14" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port14.jpg', 'Vaso de flor – Michelangelo', 'Peça decorativa impressa em Ácido Polilático (PLA) na cor Mármore. O design reproduz fielmente a cabeça da escultura de Michelangelo, com riqueza de detalhes nas feições, cabelo e expressão. Funcional como vaso ou cachepô, combinando arte clássica e utilidade.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port14.jpg" srcset="public/images/port14.webp 400w, public/images/port14.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 14" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port14.jpg" data-title="Vaso de flor – Michelangelo" data-description="Peça decorativa impressa em Ácido Polilático (PLA) na cor Mármore. O design reproduz fielmente a cabeça da escultura de Michelangelo, com riqueza de detalhes nas feições, cabelo e expressão. Funcional como vaso ou cachepô, combinando arte clássica e utilidade." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port15.jpg" srcset="public/images/port15.webp 400w, public/images/port15.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 15" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port15.jpg', 'Afrodite', 'Estatueta de Afrodite impressa em Ácido Polilático (PLA) na cor Mármore. Superfície com textura acetinada que simula pedra. Alta definição nos detalhes anatômicos e nas linhas suaves da escultura clássica. Peça indicada para decoração artística ou colecionismo.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port15.jpg" srcset="public/images/port15.webp 400w, public/images/port15.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 15" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port15.jpg" data-title="Afrodite" data-description="Estatueta de Afrodite impressa em Ácido Polilático (PLA) na cor Mármore. Superfície com textura acetinada que simula pedra. Alta definição nos detalhes anatômicos e nas linhas suaves da escultura clássica. Peça indicada para decoração artística ou colecionismo." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port16.jpg" srcset="public/images/port16.webp 400w, public/images/port16.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 16" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port16.jpg', 'São Jorge', 'Santo guerreiro em detalhada impressão 3D, perfeito para devoção.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port16.jpg" srcset="public/images/port16.webp 400w, public/images/port16.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 16" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port16.jpg" data-title="São Jorge" data-description="Santo guerreiro em detalhada impressão 3D, perfeito para devoção." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port1.jpg" srcset="public/images/port1.webp 400w, public/images/port1.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 1" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port1.jpg', 'Vaso de flor estilizado', 'Figura colecionável com acabamento artesanal e pintura detalhada.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port1.jpg" srcset="public/images/port1.webp 400w, public/images/port1.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 1" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port1.jpg" data-title="Vaso de flor estilizado" data-description="Figura colecionável com acabamento artesanal e pintura detalhada." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port10.jpg" srcset="public/images/port10.webp 400w, public/images/port10.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 10" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port10.jpg', 'Chaveiros', 'Uma forma de você agradar os seus clientes oferecendo um mimo ou agregando um pequeno valor com a venda do seu produto com um chaveiro personalizado com a marca ou nome da sua empresa.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port10.jpg" srcset="public/images/port10.webp 400w, public/images/port10.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 10" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port10.jpg" data-title="Chaveiros" data-description="Uma forma de você agradar os seus clientes oferecendo um mimo ou agregando um pequeno valor com a venda do seu produto com um chaveiro personalizado com a marca ou nome da sua empresa." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port11.jpg" srcset="public/images/port11.webp 400w, public/images/port11.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 11" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port11.jpg', 'Peças sob medida', 'Muitos clientes necessitam de peças que não encontram no mercado para vender, e aqui, nós produzimos a peça com a maior fidelidade possível ao modelo original.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port11.jpg" srcset="public/images/port11.webp 400w, public/images/port11.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 11" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port11.jpg" data-title="Peças sob medida" data-description="Muitos clientes necessitam de peças que não encontram no mercado para vender, e aqui, nós produzimos a peça com a maior fidelidade possível ao modelo original." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port22.png" srcset="public/images/port22.png 400w, public/images/port22.png 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 22" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port22.png', 'Mini Tigre Decorativo Texturizado', 'Adquira agora o seu Mini Tigre e descubra por que quem compra uma vez, escolhe a CarossiParts para sempre.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port22.png" srcset="public/images/port22.webp 400w, public/images/port22.png 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 22" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port22.png" data-title="Mini Tigre Decorativo Texturizado" data-description="Adquira agora o seu Mini Tigre e descubra por que quem compra uma vez, escolhe a CarossiParts para sempre." width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port21.jpg" srcset="public/images/port21.webp 400w, public/images/port21.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 21" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port21.jpg', 'Snorkel', 'Snorkel sob medida para quadriciclos.')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port21.jpg" srcset="public/images/port21.webp 400w, public/images/port21.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Trabalho 21" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port21.jpg" data-title="Snorkel" data-description="Snorkel sob medida para quadriciclos." width="400" height="400" loading="lazy">
                 </div>
             </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md relative">
-                    <img id="image26a" src="public/images/port26.jpg" srcset="public/images/port26.webp 400w, public/images/port26.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Gold Eagle" class="w-full h-full object-cover cursor-pointer aspect-square object-top-[10%]" onclick="openModal('public/images/port26.jpg', 'Gold Eagle', 'Águia feita em Ácido Polilático na cor Dourado, com 20cm de altura. Transmite força, liberdade e liderança ao ambiente.')" loading="lazy" width="400" height="400">
-                    <img id="image26b" src="public/images/port26b.jpg" srcset="public/images/port26b.webp 400w, public/images/port26b.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Gold Eagle (Verso)" class="w-full h-full object-cover cursor-pointer aspect-square object-top-[10%] absolute top-0 left-0 hidden" onclick="openModal('public/images/port26b.jpg', 'Gold Eagle (Verso)', 'Águia feita em Ácido Polilático na cor Dourado, com 20cm de altura. Vista de outro ângulo.')" loading="lazy" width="400" height="400">
+                    <img id="image26a" src="public/images/port26.jpg" srcset="public/images/port26.webp 400w, public/images/port26.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Gold Eagle" class="w-full h-full object-cover cursor-pointer aspect-square object-top-[10%] gallery-item-trigger" data-src="public/images/port26.jpg" data-title="Gold Eagle" data-description="Águia feita em Ácido Polilático na cor Dourado, com 20cm de altura. Transmite força, liberdade e liderança ao ambiente." width="400" height="400" loading="lazy">
+                    <img id="image26b" src="public/images/port26b.jpg" srcset="public/images/port26b.webp 400w, public/images/port26b.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Gold Eagle (Verso)" class="w-full h-full object-cover cursor-pointer aspect-square object-top-[10%] absolute top-0 left-0 hidden gallery-item-trigger" data-src="public/images/port26b.jpg" data-title="Gold Eagle (Verso)" data-description="Águia feita em Ácido Polilático na cor Dourado, com 20cm de altura. Vista de outro ângulo." width="400" height="400" loading="lazy">
                     <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                        <button id="pauseImage26" class="bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none">
+                        <button id="pauseImage26" class="bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none" aria-label="Pausar carrossel de imagens">
                             <i class="fas fa-pause"></i>
                         </button>
-                        <button id="playImage26" class="bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none hidden">
+                        <button id="playImage26" class="bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none hidden" aria-label="Reproduzir carrossel de imagens">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port24.jpg" srcset="public/images/port24.webp 400w, public/images/port24.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Porta chaves" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port24.jpg', 'Porta chaves', 'Porta chaves personalizado, escreva o que quiser. 12cm de comprimento por 3,5 centímetros de altura e 5mm de espessura')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port24.jpg" srcset="public/images/port24.webp 400w, public/images/port24.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Porta chaves" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port24.jpg" data-title="Porta chaves" data-description="Porta chaves personalizado, escreva o que quiser. 12cm de comprimento por 3,5 centímetros de altura e 5mm de espessura" width="400" height="400" loading="lazy">
                 </div>
                 
                 <div class="gallery-item bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
-                    <img src="public/images/port25.jpg" srcset="public/images/port25.webp 400w, public/images/port25.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Vaso de flor autoirrigável biodegradável" class="w-full h-full object-cover cursor-pointer aspect-square" onclick="openModal('public/images/port25.jpg', 'Vaso de flor autoirrigável biodegradável', 'Vaso de flor auto irrigável biodegradável com alimentação de água lateral - 18cm')" loading="lazy" width="400" height="400">
+                    <img src="public/images/port25.jpg" srcset="public/images/port25.webp 400w, public/images/port25.jpg 800w" sizes="(max-width: 600px) 400px, 800px" alt="Vaso de flor autoirrigável biodegradável" class="w-full h-full object-cover cursor-pointer aspect-square gallery-item-trigger" data-src="public/images/port25.jpg" data-title="Vaso de flor autoirrigável biodegradável" data-description="Vaso de flor auto irrigável biodegradável com alimentação de água lateral - 18cm" width="400" height="400" loading="lazy">
                 </div>
             </div>
             
@@ -291,9 +348,9 @@
         </div>
         
         <!-- Modal -->
-        <div id="modalOverlay" class="modal-overlay">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div id="modalOverlay" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" tabindex="-1">
             <div class="modal-content bg-white dark:bg-gray-800 p-6 rounded-lg">
+                <button class="close-modal" aria-label="Fechar modal">&times;</button>
                 <div class="modal-image-container">
                     <img id="modalImage" src="" alt="" class="mx-auto max-w-full">
                 </div>
@@ -301,14 +358,12 @@
                     <h3 id="modalTitle" class="text-xl font-bold text-center"></h3>
                     <p id="modalDescription" class="mt-2 text-center overflow-y-auto"></p>
                 </div>
-                <div class="flex justify-between items-center w-full mt-4">
-                    <button id="modal-prev-btn" class="bg-primary hover:bg-secondary text-white p-2 rounded-full focus:outline-none">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button id="modal-next-btn" class="bg-primary hover:bg-secondary text-white p-2 rounded-full focus:outline-none">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
+                <button id="modal-prev-btn" class="modal-nav-btn left-4" aria-label="Imagem anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="modal-next-btn" class="modal-nav-btn right-4" aria-label="Próxima imagem">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -321,7 +376,7 @@
             
             <div class="flex flex-col md:flex-row gap-8">
                 <div class="md:w-1/2">
-                    <img src="public/images/orcamento.png" srcset="public/images/orcamento.webp 600w, public/images/orcamento.png 1200w" sizes="(max-width: 768px) 600px, 1200px" alt="Processo de impressão 3D" class="w-full rounded-lg shadow-md" loading="lazy" width="600" height="400">
+                    <img src="public/images/orcamento.png" srcset="public/images/orcamento.webp 600w, public/images/orcamento.png 1200w" sizes="(max-width: 768px) 600px, 1200px" alt="Processo de impressão 3D" class="w-full rounded-lg shadow-md" width="600" height="400" loading="lazy">
                 </div>
                 
                 <div class="md:w-1/2">
@@ -348,18 +403,31 @@
                     </div>
                     
                     <div class="bg-primary dark:bg-secondary text-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-2xl font-extrabold mb-4 text-center text-white">Entre em contato conosco</h3>
-                        <div class="flex flex-col space-y-2">
-                            <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="bg-white text-gray-800 hover:bg-gray-100 font-semibold py-2 px-4 rounded flex items-center justify-center transition">
-                                <i class="fab fa-whatsapp mr-2 text-green-500"></i> Solicitar orçamento via WhatsApp
-                            </a>
-                            <a href="https://www.instagram.com/carossiparts/" target="_blank" class="bg-white text-gray-800 hover:bg-gray-100 font-semibold py-2 px-4 rounded flex items-center justify-center transition">
-                                <i class="fab fa-instagram mr-2 text-pink-500"></i> Contato via Instagram
-                            </a>
-                            <a href="mailto:carossiparts@gmail.com" class="bg-white text-gray-800 hover:bg-gray-100 font-semibold py-2 px-4 rounded flex items-center justify-center transition">
-                                <i class="fas fa-envelope mr-2 text-primary"></i> Solicitar orçamento via e-mail
-                            </a>
-                        </div>
+                        <h3 class="text-2xl font-extrabold mb-4 text-center text-white">Solicite seu Orçamento</h3>
+                        <form id="contactForm" action="https://formsubmit.co/carossiparts@gmail.com" method="POST" class="space-y-4">
+                            <input type="hidden" name="_subject" value="Nova Solicitação de Orçamento - CarossiParts">
+                            <input type="hidden" name="_next" value="https://carossiparts.com.br/obrigado.html">
+                            <input type="hidden" name="_captcha" value="false">
+                            <div>
+                                <label for="name" class="block text-white text-sm font-bold mb-2">Nome:</label>
+                                <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-secondary transition duration-300 ease-in-out" placeholder="Seu nome" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-white text-sm font-bold mb-2">E-mail:</label>
+                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-secondary transition duration-300 ease-in-out" placeholder="seu@email.com" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-white text-sm font-bold mb-2">Telefone (WhatsApp):</label>
+                                <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-secondary transition duration-300 ease-in-out" placeholder="(XX) XXXXX-XXXX">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-white text-sm font-bold mb-2">Sua Mensagem/Projeto:</label>
+                                <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-secondary transition duration-300 ease-in-out" placeholder="Descreva sua ideia ou projeto..." required></textarea>
+                            </div>
+                            <button type="submit" class="bg-white text-primary hover:bg-gray-100 font-semibold py-2 px-4 rounded flex items-center justify-center w-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                                <i class="fas fa-paper-plane mr-2"></i> Enviar Orçamento
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -378,7 +446,7 @@
                     <i class="fas fa-store text-4xl mb-4 text-orange-500"></i>
                     <h3 class="text-xl font-semibold mb-2 dark:text-white">Shopee</h3>
                     <p class="mb-4 dark:text-white">Encontre nossos produtos prontos para entrega com frete rápido e pagamento facilitado.</p>
-                    <a href="https://shopee.com.br/carossiparts" target="_blank" class="mt-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded transition">
+                    <a href="https://shopee.com.br/carossiparts" target="_blank" class="mt-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105">
                         Visite a loja
                     </a>
                 </div>
@@ -388,7 +456,7 @@
                     <i class="fab fa-shopify text-4xl mb-4 text-yellow-500"></i>
                     <h3 class="text-xl font-semibold mb-2 dark:text-white">Mercado Livre</h3>
                     <p class="mb-4 dark:text-white">Compre com a segurança do Mercado Livre e aproveite o Mercado Pago e entregas rápidas.</p>
-                    <a href="https://lista.mercadolivre.com.br/_CustId_192984959?item_id=MLB5161827074&category_id=MLB22655&seller_id=192984959&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" class="mt-auto bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded transition">
+                    <a href="https://lista.mercadolivre.com.br/_CustId_192984959?item_id=MLB5161827074&category_id=MLB22655&seller_id=192984959&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" class="mt-auto bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105">
                         Visite a loja
                     </a>
                 </div>
@@ -399,9 +467,39 @@
                 <p class="mb-6 text-center">Para projetos novos, personalizados e sob demanda, fale conosco diretamente no WhatsApp. Estamos prontos para transformar sua ideia em realidade!</p>
                 <p class="mb-6 text-center">Oferecemos uma vasta gama de possibilidades, desde pequenas peças de reposição até protótipos complexos e itens de decoração exclusivos. Se você tem um arquivo 3D, podemos imprimi-lo. Se tem apenas uma ideia, nossa equipe de design pode ajudar a modelá-la.</p>
                 <div class="text-center">
-                    <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="bg-white text-gray-800 hover:bg-gray-100 font-semibold py-2 px-6 rounded-lg inline-flex items-center transition">
+                    <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="bg-white text-gray-800 hover:bg-gray-100 font-semibold py-2 px-6 rounded-lg inline-flex items-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105">
                         <i class="fab fa-whatsapp mr-2 text-green-500"></i> Fale conosco
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 px-4 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="section-title text-3xl font-bold mb-10 text-center text-primary dark:text-secondary">Perguntas Frequentes (FAQ)</h2>
+            <div class="space-y-6 max-w-3xl mx-auto">
+                <div class="faq-item bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 dark:text-white">Quais materiais vocês utilizam para impressão 3D?</h3>
+                    <p class="dark:text-gray-300">Utilizamos principalmente PLA (Ácido Polilático) e PETG (Polietileno Tereftalato Glicol), ambos materiais biodegradáveis e de alta resistência, ideais para diversas aplicações, desde protótipos a peças decorativas e funcionais.</p>
+                </div>
+                <div class="faq-item bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 dark:text-white">Como posso solicitar um orçamento para um projeto personalizado?</h3>
+                    <p class="dark:text-gray-300">Você pode solicitar um orçamento entrando em contato conosco via WhatsApp, Instagram ou e-mail. Descreva sua ideia ou envie referências visuais, e nossa equipe retornará com uma proposta detalhada.</p>
+                </div>
+                <div class="faq-item bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 dark:text-white">Vocês criam action figures personalizadas?</h3>
+                    <p class="dark:text-gray-300">Sim! Somos especialistas na criação de action figures personalizadas, coloridas e pintadas à mão, com acabamento artesanal de alta qualidade. Transformamos seus personagens favoritos em peças únicas para sua coleção.</p>
+                </div>
+                <div class="faq-item bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 dark:text-white">Qual o prazo de entrega para os projetos?</h3>
+                    <p class="dark:text-gray-300">O prazo de entrega varia conforme a complexidade e o tamanho do projeto. Após a aprovação do orçamento, informaremos o tempo estimado para a produção e envio da sua peça.</p>
+                </div>
+                <div class="faq-item bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 dark:text-white">Posso retirar o produto no local?</h3>
+                    <p class="dark:text-gray-300">Sim, oferecemos a opção de retirada no local para clientes que preferem buscar seus produtos diretamente em nosso endereço. Consulte-nos para agendar a retirada.</p>
                 </div>
             </div>
         </div>
@@ -413,7 +511,7 @@
             <h2 class="text-3xl font-bold mb-10 text-center text-primary dark:text-secondary">Localização</h2>
             <p class="text-center mb-6">Temos opção para retirada no local</p>
             <div class="flex justify-center mt-8">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.857610266919!2d-51.524180799999996!3d-29.13939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c3b383ea2d8b7%3A0xc778b89f7c5dadf8!2sR.%20%C3%82ngelo%20Marcon%20-%20S%C3%A3o%20Roque%2C%20Bento%20Gon%C3%A7alves%20-%20RS%2C%2095700-000!5e0!3m2!1spt-BR!2sbr!4v1749442415974!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.857610266919!2d-51.524180799999996!3d-29.13939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c3b383ea2d8b7%3A0xc778b89f7c5dadf8!2sR.%20%C3%82ngelo%20Marcon%20-%20S%C3%A3o%20Roque%2C%20Bento%20Gon%C3%A7alves%20-%20RS%2C%2095700-000!5e0!3m2!1spt-BR!2sbr!4v1749442415974!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             
         </div>
@@ -425,19 +523,19 @@
             <div class="flex flex-col md:flex-row md:justify-between md:items-start md:text-left text-center gap-6 md:gap-8">
                 <!-- Coluna 1: Logo e Descrição -->
                 <div class="flex flex-col items-center md:items-start md:w-1/3 text-center md:text-left">
-                    <img src="public/images/logoquemsomos.png" srcset="public/images/logoquemsomos.webp 112w, public/images/logoquemsomos.png 224w" sizes="(max-width: 768px) 112px, 224px" alt="Logo CarossiParts" class="h-24 sm:h-28 mb-4" loading="lazy" width="112" height="112">
+                    <img src="public/images/logoquemsomos.png" srcset="public/images/logoquemsomos.webp 112w, public/images/logoquemsomos.png 224w" sizes="(max-width: 768px) 112px, 224px" alt="Logo CarossiParts" class="h-24 sm:h-28 mb-4" width="112" height="112" loading="lazy">
                     <p class="max-w-xs mb-4 text-base md:text-sm">Transformamos ideias em realidade com a mais alta tecnologia de impressão 3D.</p>
                     <div class="flex space-x-4 mt-4">
-                        <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="hover:text-primary dark:hover:text-secondary transition">
+                        <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105">
                             <i class="fab fa-whatsapp text-xl"></i>
                         </a>
-                        <a href="https://www.instagram.com/carossiparts/" target="_blank" class="hover:text-primary dark:hover:text-secondary transition">
+                        <a href="https://www.instagram.com/carossiparts/" target="_blank" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
-                        <a href="https://shopee.com.br/carossiparts" target="_blank" class="hover:text-primary dark:hover:text-secondary transition">
+                        <a href="https://shopee.com.br/carossiparts" target="_blank" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105">
                             <i class="fas fa-store text-xl"></i>
                         </a>
-                        <a href="https://lista.mercadolivre.com.br/_CustId_192984959?item_id=MLB5161827074&category_id=MLB22655&seller_id=192984959&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" class="hover:text-primary dark:hover:text-secondary transition">
+                        <a href="https://lista.mercadolivre.com.br/_CustId_192984959?item_id=MLB5161827074&category_id=MLB22655&seller_id=192984959&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1 hover:scale-105">
                             <i class="fab fa-shopify text-xl"></i>
                         </a>
                     </div>
@@ -447,10 +545,11 @@
                 <div class="md:w-1/3 mt-8 md:mt-0 text-center md:text-left">
                     <h3 class="text-lg font-semibold mb-4">Navegação</h3>
                     <ul class="space-y-2 text-base md:text-sm">
-                        <li><a href="#quem-somos" class="hover:text-primary dark:hover:text-secondary transition">Quem somos</a></li>
-                        <li><a href="#trabalhos" class="hover:text-primary dark:hover:text-secondary transition">Trabalhos</a></li>
-                        <li><a href="#orcamentos" class="hover:text-primary dark:hover:text-secondary transition">Orçamentos</a></li>
-                        <li><a href="#onde-comprar" class="hover:text-primary dark:hover:text-secondary transition">Onde comprar</a></li>
+                        <li><a href="#quem-somos" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1">Quem somos</a></li>
+                        <li><a href="#trabalhos" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1">Trabalhos</a></li>
+                        <li><a href="#orcamentos" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1">Orçamentos</a></li>
+                        <li><a href="#onde-comprar" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1">Onde comprar</a></li>
+                        <li><a href="#faq" class="hover:text-primary dark:hover:text-secondary transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1">FAQ</a></li>
                     </ul>
                 </div>
 
@@ -464,11 +563,11 @@
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-envelope mr-2 text-secondary"></i>
-                            <a href="mailto:carossiparts@gmail.com" class="hover:underline">carossiparts@gmail.com</a>
+                            <a href="mailto:carossiparts@gmail.com" class="hover:underline transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1">carossiparts@gmail.com</a>
                         </div>
                         <div class="flex items-center">
                             <i class="fab fa-whatsapp mr-2 text-secondary"></i>
-                            <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="hover:underline">+55 54 9 9188-6962</a>
+                            <a href="https://api.whatsapp.com/send?phone=5554991886962" target="_blank" class="hover:underline transition duration-300 ease-in-out transform hover:-translate-y-1 hover:rotate-1">+55 54 9 9188-6962</a>
                         </div>
                     </div>
                 </div>
@@ -479,6 +578,60 @@
             </div>
         </div>
     </footer>
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é impressão 3D?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Impressão 3D é um processo de fabricação aditiva onde um objeto tridimensional é criado a partir de um design digital. Camadas sucessivas de material são depositadas até que o objeto seja formado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais materiais vocês utilizam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Utilizamos principalmente PLA (Ácido Polilático) e PETG (Polietileno Tereftalato Glicol), ambos materiais biodegradáveis e de alta resistência, adequados para diversas aplicações."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como faço para solicitar um orçamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você pode solicitar um orçamento entrando em contato conosco via WhatsApp, Instagram ou e-mail. Descreva seu projeto ou envie referências visuais para que possamos preparar uma proposta personalizada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês criam action figures personalizadas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, somos especializados na criação de action figures coloridas e pintadas à mão, com acabamento artesanal, perfeitas para colecionadores e fãs de cultura pop."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o prazo de entrega?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O prazo de entrega varia de acordo com a complexidade e o tamanho do projeto. Após a aprovação do orçamento, informaremos o prazo estimado para a produção e envio."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <button id="backToTopBtn" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition duration-300 ease-in-out transform hover:scale-110 focus:outline-none hidden" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
 
     <script src="public/js/scripts.js"></script>
 </body>
