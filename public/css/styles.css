@@ -187,6 +187,11 @@ body {
 
 }
 
+    .dark .modal-text-content h3,
+    .dark .modal-text-content p {
+        color: white;
+    }
+
 /* Estilos para o modal no modo escuro */
 .dark .modal-content h3,
 .dark .modal-content p {

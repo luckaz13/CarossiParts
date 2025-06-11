@@ -26,11 +26,15 @@ const mobileMenu = document.getElementById('mobileMenu');
 
 if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
+        const icon = mobileMenuButton.querySelector('i');
         if (mobileMenu.classList.contains('hidden')) {
             mobileMenu.classList.remove('hidden');
             mobileMenu.classList.add('mobile-menu-fade-in');
             mobileMenu.classList.remove('mobile-menu-fade-out');
             mobileMenuButton.setAttribute('aria-expanded', 'true');
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+            mobileMenuButton.setAttribute('aria-label', 'Fechar menu mobile');
         } else {
             mobileMenu.classList.add('mobile-menu-fade-out');
             mobileMenu.classList.remove('mobile-menu-fade-in');
@@ -39,7 +43,32 @@ if (mobileMenuButton && mobileMenu) {
                 mobileMenu.removeEventListener('animationend', handler);
             }, { once: true });
             mobileMenuButton.setAttribute('aria-expanded', 'false');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+            mobileMenuButton.setAttribute('aria-label', 'Abrir menu mobile');
         }
+    });
+}
+
+// Fecha o menu mobile ao clicar em um link
+const mobileMenuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+if (mobileMenuLinks.length > 0) {
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('mobile-menu-fade-out');
+                mobileMenu.classList.remove('mobile-menu-fade-in');
+                mobileMenu.addEventListener('animationend', function handler() {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.removeEventListener('animationend', handler);
+                }, { once: true });
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                mobileMenuButton.setAttribute('aria-label', 'Abrir menu mobile');
+            }
+        });
     });
 }
 
