@@ -27,25 +27,45 @@ const mobileMenu = document.getElementById('mobileMenu');
 if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
         const icon = mobileMenuButton.querySelector('i');
+        console.log('--- Clique no botão do menu mobile ---');
+        console.log('Estado inicial do menu (hidden):', mobileMenu.classList.contains('hidden'));
+        console.log('Classes do menu antes da ação:', mobileMenu.classList.value);
+
         if (mobileMenu.classList.contains('hidden')) {
+            // Abrir menu
             mobileMenu.classList.remove('hidden');
             mobileMenu.classList.add('mobile-menu-fade-in');
-            mobileMenu.classList.remove('mobile-menu-fade-out');
+            mobileMenu.classList.remove('mobile-menu-fade-out'); // Garante que a classe de saída seja removida
             mobileMenuButton.setAttribute('aria-expanded', 'true');
             icon.classList.remove('fa-bars');
             icon.classList.add('fa-times');
             mobileMenuButton.setAttribute('aria-label', 'Fechar menu mobile');
+            console.log('Menu aberto. Classes do menu após abrir:', mobileMenu.classList.value);
+            console.log('Ícone do botão após abrir:', icon.classList.value);
         } else {
+            // Fechar menu
+            console.log('Iniciando processo de fechamento do menu.');
             mobileMenu.classList.add('mobile-menu-fade-out');
-            mobileMenu.classList.remove('mobile-menu-fade-in');
-            mobileMenu.addEventListener('animationend', function handler() {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.removeEventListener('animationend', handler);
-            }, { once: true });
+            mobileMenu.classList.remove('mobile-menu-fade-in'); // Garante que a classe de entrada seja removida
+            
+            // Adiciona a classe hidden imediatamente para garantir que o menu seja ocultado
+            // A animação de fade-out ainda será executada visualmente (se o display não for sobrescrito)
+            // e o animationend ainda pode ser útil para outras ações, mas não para o 'hidden'
+            mobileMenu.classList.add('hidden');
+            
+            // Atualiza o ícone e aria-expanded imediatamente ao fechar o menu
             mobileMenuButton.setAttribute('aria-expanded', 'false');
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
             mobileMenuButton.setAttribute('aria-label', 'Abrir menu mobile');
+            console.log('Menu oculto. Classes do menu após adicionar hidden:', mobileMenu.classList.value);
+            console.log('Ícone do botão após fechar:', icon.classList.value);
+
+            // O animationend ainda pode ser útil para outras ações, mas não para o 'hidden' ou ícone
+            mobileMenu.addEventListener('animationend', function handler() {
+                console.log('Evento animationend disparado para fechamento.');
+                mobileMenu.removeEventListener('animationend', handler); // Remove o listener após a execução
+            }, { once: true });
         }
     });
 }
@@ -56,17 +76,26 @@ if (mobileMenuLinks.length > 0) {
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (!mobileMenu.classList.contains('hidden')) {
+                console.log('--- Link do menu mobile clicado. Fechando menu. ---');
                 mobileMenu.classList.add('mobile-menu-fade-out');
-                mobileMenu.classList.remove('mobile-menu-fade-in');
-                mobileMenu.addEventListener('animationend', function handler() {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.removeEventListener('animationend', handler);
-                }, { once: true });
+                mobileMenu.classList.remove('mobile-menu-fade-in'); // Garante que a classe de entrada seja removida
+                
+                // Adiciona a classe hidden imediatamente para garantir que o menu seja ocultado
+                mobileMenu.classList.add('hidden');
+
+                // Atualiza o ícone e aria-expanded imediatamente ao fechar o menu
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
                 const icon = mobileMenuButton.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
                 mobileMenuButton.setAttribute('aria-label', 'Abrir menu mobile');
+                console.log('Menu oculto. Classes do menu após adicionar hidden (link):', mobileMenu.classList.value);
+                console.log('Ícone do botão após fechar (link):', icon.classList.value);
+
+                mobileMenu.addEventListener('animationend', function handler() {
+                    console.log('Evento animationend disparado para fechamento (link).');
+                    mobileMenu.removeEventListener('animationend', handler); // Remove o listener após a execução
+                }, { once: true });
             }
         });
     });
