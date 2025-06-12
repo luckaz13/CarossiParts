@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function openModal(index) {
+    console.log('openModal() chamado. Índice:', index); // Log para diagnóstico
     focusedElementBeforeModal = document.activeElement; // Store the currently focused element
 
     currentGalleryIndex = index; // Set the current index directly
@@ -156,7 +157,8 @@ function openModal(index) {
     modal.classList.add('modal-slide-in-up');
     modal.classList.remove('modal-slide-out-down');
     modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden'; // Removido para evitar travamento em webviews
+    console.log('Manipulação de overflow do body removida.'); // Log para diagnóstico
     modal.classList.add('will-change-transform', 'will-change-opacity');
     document.querySelectorAll('body > *:not(#modalOverlay)').forEach(element => {
         if (element.id !== 'modalOverlay') {
@@ -171,10 +173,12 @@ function openModal(index) {
 }
 
 function closeModal() {
+    console.log('closeModal() chamado.'); // Log para diagnóstico
     modal.classList.remove('modal-slide-in-up');
     modal.classList.add('modal-slide-out-down');
     
-    document.body.style.overflow = 'auto';
+    // document.body.style.overflow = 'auto'; // Removido para evitar travamento em webviews
+    console.log('Manipulação de overflow do body removida.'); // Log para diagnóstico
 
     document.querySelectorAll('body > *:not(#modalOverlay)').forEach(element => {
         if (element.id !== 'modalOverlay') {
